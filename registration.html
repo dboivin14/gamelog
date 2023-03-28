@@ -5,9 +5,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
-    <form>
-      <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname"><br>
+    <div class="container w-75 mt-3">
+    <form name="#userregister" action="#user" class="was-validated">
+      <div class="mb-3 mt-3">
+        <label for="fname" class="form-label">First Name:</label>
+        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
       <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname"><br>
       <label for="dob">Date of Birth:</label><br>
@@ -24,6 +29,7 @@
       <br>
       <label for="login"><a href="login.html">Already have an account?</a></label><br>
     </form>
+   </div>
   </body>
 </html>
 
