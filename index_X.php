@@ -38,6 +38,26 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
 <body>
+  <?php
+    session_start();
+    if (isset($_SESSION['usertype'])) {
+      $usertype = $_SESSION['usertype'];
+      if ($usertype == 1) {
+        $homepage = "index_X.php";
+        $signupPage = "registration_X.php";
+      } 
+      /*
+      else if ($usertype == 2) {
+        $homepage = "staff.php";
+        $signupPage = "staffsignup.php";
+      }
+       */ 
+    } else {
+      $homepage = "index_X.php";
+      $signupPage = "registration_X.php";
+    }
+    ?>
+  
   <ul class="topnav">
   <li><a class="active" href="index.html">Home</a></li>
   <li><a href="#games">Games</a></li>
@@ -54,3 +74,4 @@
 
 </body>
 </html>
+
