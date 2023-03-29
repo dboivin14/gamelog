@@ -3,12 +3,12 @@
 require "DBConnect.php";
 
 // collect form data
-$fname = $_POST["firstname"];
-$lname = $_POST["lastname"];
+$fname = $_POST["fname"];
+$lname = $_POST["lname"];
 $dob = $_POST["dob"];
 $email = $_POST["email"];
-$username = $_POST["username"];
-$pwd = $_POST["password"];
+$username = $_POST["user"];
+$pwd = $_POST["pswd"];
 
 $verified = 0;
 $usertype = 1;
