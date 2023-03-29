@@ -13,7 +13,7 @@ $pwd = $_POST["pswd"];
 $verified = 0;
 $usertype = 1;
 
-$sql = "insert into customerregister values customerID, '" . $user . "', '" . $pswd . "', '" .
+$sql = "insert into customerregister values customerID, '" . $username . "', '" . $pwd . "', '" .
   $fname . "', '" . $lname . "','" . $dob . "','" . $email . "', '" . $verified . "' '" . $usertype . "'";
 echo modifyDB($sql) . "<br>Use back button to return";
 ?>
