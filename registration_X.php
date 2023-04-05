@@ -2,8 +2,8 @@
 <div class="container w-75 mt-3">
   <h3>Create an account</h3>
   <p>Please complete and submit the form.</p>
-    <form name="#userregister" action="#user" class="was-validated">
-      <div class="mb-3 mt-3">
+  <form name="registration" action="registrationAction.php" class="was-validated">
+      <div class="mb-3">
         <label for="fname" class="form-label">First Name:</label>
         <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required>
         <div class="valid-feedback">Valid.</div>
@@ -44,13 +44,12 @@
         <input type="password" class="form-control" id="pwd" placeholder="Confirm password" name="pwd" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
-      </div>
       <button type="submit" class="btn btn-primary">Submit</button>
+      </div>   
       
     </form>
    </div>
    <label for="login"><a href="login.html">Already have an account?</a></label><br>
-  </body>
-</html>
+
 
       
