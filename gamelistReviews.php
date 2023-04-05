@@ -61,7 +61,9 @@
     <p>Some text about Hi-Fi Rush.</p>
     <p><button>Open Game</button></p>
   </div>
-
+</div>
+  
+<div class="test">  
   <div class="card">
     <img src="images/metroidprime.png" alt="metroidprime" style="width:100%">
     <h1>Metroid Prime Remastered</h1>
@@ -77,7 +79,9 @@
     <p>Some text about Hogwarts Legacy.</p>
     <p><button>Open Game</button></p>
   </div>
-
+</div>
+  
+<div class="test"> 
   <div class="card">
     <img src="images/deadspace.png" alt="deadspace" style="width:100%">
     <h1>Dead Space</h1>
@@ -93,7 +97,9 @@
     <p>Some text about Persona 4 Golden.</p>
     <p><button>Open Game</button></p>
   </div>
-
+</div>
+  
+<div class="test"> 
   <div class="card">
     <img src="images/kirbydreamland.png" alt="kirbydreamland" style="width:100%">
     <h1>Kirby's Return to Dream Land Deluxe</h1>
