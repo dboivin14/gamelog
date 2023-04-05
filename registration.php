@@ -4,7 +4,7 @@
   <p>Please complete and submit the form.</p>
 
 <div class="container w-75 mt-3">
-    <form name="#userregister" action="registrationaction.php" method="post" class="was-validated">
+    <form name="#userregister" action="processForm.php" method="post" class="was-validated">
       <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name:</label>
         <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required>
@@ -56,3 +56,4 @@
   </form>
 </div>
 
+      
