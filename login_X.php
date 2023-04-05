@@ -72,11 +72,7 @@ span.psw {
     <h2>Login Form</h2>
 
     <form action="/index.html" method="post">
-      <div class="imgcontainer">
-        <img src="gamelog_logo.png" alt="Avatar" class="avatar">
-      </div>
-
-      <div class="container">
+     <div class="container">
         <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
 
