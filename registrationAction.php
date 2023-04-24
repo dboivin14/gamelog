@@ -11,7 +11,7 @@ var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
 $password_hash = password_hash($_POST["pswd"], PASSWORD_DEFAULT);
 
-$mysqli require __DIR__ . "DBCONNECT.php";
+require __DIR__ . "DBCONNECT.php";
 
 print_r($_POST)
 var_dump($password_hash);
