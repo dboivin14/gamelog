@@ -37,13 +37,11 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  convert_multi_array($result);
+  test_array($result);
   
-}function convert_multi_array($array) {
-    $imploded = array();
-    foreach($result as $array) {
-        $imploded[] = implode('~', $array);
-    }
-    return implode("&", $imploded);
+}function test_array($array) {
+    header("Content-Type: application/json");
+    echo json_encode($array);
+    exit();
 }
 ?>
