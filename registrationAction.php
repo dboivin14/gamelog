@@ -9,12 +9,10 @@ $password = $_POST ["pwd"];
 
 var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
-$password_hash = password_hash($_POST["pswd"], PASSWORD_DEFAULT);
+
 
 require __DIR__ . "DBCONNECT.php";
 
-print_r($_POST)
-var_dump($password_hash);
 
 $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
 		VALUES (?,?,?,?,?,?)";
