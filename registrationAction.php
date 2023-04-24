@@ -1,6 +1,6 @@
 <?php
 
-$firstname = $_POST ["firstName"];
+$firstname = $_POST ["fname"];
 $lastname = $_POST ["lname"];
 $dob = $_POST ["dob"];
 $email = $_POST ["email"];
