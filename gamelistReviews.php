@@ -39,8 +39,3 @@ if (gettype($result) == "object") {
   echo $result;
 }
 ?>
-
-
-
-</body>
-</html>
