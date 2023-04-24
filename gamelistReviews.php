@@ -6,6 +6,7 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
 $sql = 'SELECT GameID, rating, UserID, reviewtext, Date FROM reviews';
 $result = $db->query($sql);
 $colCount = 0;
+$num_rows = 0;
 if (gettype($result) == "object") {
   if ($result->num_rows > 0) {
     echo '<div class="row">';
