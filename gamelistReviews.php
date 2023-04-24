@@ -11,7 +11,7 @@ if (gettype($result) == "object") {
     echo '<div class="row">';
     while ($row = $result->fetch_assoc()) {
       $colCount += 1;
-      $GameName = $row['GameName'];
+      $GameName = $row['GameID'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
