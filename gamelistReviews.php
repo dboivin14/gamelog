@@ -37,19 +37,8 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  
+  $result;
  
 }
-function implode_recur($separator, $arrayvar) {
-    $output = "";
-    foreach ($arrayvar as $av)
-    if (is_array ($av)) 
-        $output .= implode_recur($separator, $av); // Recursive array 
-    else                   
-        $output .= $separator.$av;
-
-    return $output;
-}
- $endResult = implode_recur(">>",$result);
-
+echo json_encode($result);
 ?>
