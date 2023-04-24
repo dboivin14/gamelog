@@ -4,12 +4,12 @@
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
 $sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
-$conn = queryDB($sql);
+$result = queryDB($sql);
 $colCount = 0;
 if (gettype($result) == "object") {
-  if ($conn->num_rows > 0) {
+  if ($result->num_rows > 0) {
     echo '<div class="row">';
-    while ($row = $conn->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
