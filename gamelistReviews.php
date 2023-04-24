@@ -38,7 +38,7 @@ if (gettype($result) == "object") {
   }
 } else {
   
-  $result = implode_recur(">>",$result);
+ 
 }
 function implode_recur($separator, $arrayvar) {
     $output = "";
@@ -50,6 +50,6 @@ function implode_recur($separator, $arrayvar) {
 
     return $output;
 }
-
+ $result = implode_recur(">>",$result);
 
 ?>
