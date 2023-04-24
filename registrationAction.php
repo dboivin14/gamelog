@@ -25,10 +25,10 @@ if($_POST["pwd"] !== $_POST["pswd"]) {
 }
 
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) {
-	die("Valid email required")
+	die("Valid email required");
 
 }
-
+;
 $password_hash = password_hash($_POST["pswd"], PASSWORD_DEFAULT);
 
 $mysqli require __DIR__ . "DBCONNECT.php";
