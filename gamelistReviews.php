@@ -50,6 +50,6 @@ function implode_recur($separator, $arrayvar) {
 
     return $output;
 }
- $result = implode_recur(">>",$result);
+ $endResult = implode_recur(">>",$result);
 
 ?>
