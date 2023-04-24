@@ -2,7 +2,7 @@
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
 include 'sqlpassword.php';
-
+$db = mysql_connect('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
 $sql = "SELECT GameID, GameName, UserID, reviewtext, Date FROM reviews";
 $result = mysqli_query($sql, $db);
 $colCount = 0;
