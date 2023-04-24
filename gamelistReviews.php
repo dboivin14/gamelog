@@ -3,7 +3,7 @@
 
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
-$sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
+$sql = "SELECT GameID, GameName, UserID, reviewtext, Date FROM reviews";
 $result = queryDB($sql);
 $colCount = 0;
 if (gettype($result) == "object") {
