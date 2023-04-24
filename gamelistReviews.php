@@ -6,7 +6,7 @@ $sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
 $result = queryDB($sql);
 $colCount = 0;
 if (gettype($result) == "object") {
-  //if ($result->num_rows > 0) {
+  if ($result->num_rows > 0) {
     echo '<div class="row">';
     while ($row = $result->fetch_assoc()) {
       $colCount += 1;
@@ -32,7 +32,7 @@ if (gettype($result) == "object") {
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
       }
-    //}
+    }
     echo '</div>';
   }
 } else {
