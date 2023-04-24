@@ -39,7 +39,7 @@ if (gettype($result) == "object") {
 } else {
 function convert_multi_array($array) {
   $out = implode("&",array_map(function($a) {return implode("~",$a);},$result));
-  print_r($out);
+  echo($out);
 }
   
 }
