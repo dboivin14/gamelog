@@ -10,11 +10,11 @@ if (gettype($result) == "object") {
     echo '<div class="row">';
     while ($row = $result->fetch_assoc()) {
       $colCount += 1;
-      $name = $row['GameName'];
+      $GameName = $row['GameName'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
-      $date = $row['Date'];
+      $Date = $row['Date'];
       ?>
       <div class="col card">
         <div class="card-body">
