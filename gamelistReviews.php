@@ -48,7 +48,7 @@ function implode_recur($separator, $arrayvar) {
     else                   
         $out .= $separator.$av;
 
-    return $out;<br>
+    return $out;
 }
 
 $result = implode_recur(">>",$result);
