@@ -3,7 +3,7 @@
 
 require 'DBConnect.php';
 $sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
-$result = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
+$result = queryDB($sql);
 $colCount = 0;
 if (gettype($result) == "object") {
   //if ($result->num_rows > 0) {
