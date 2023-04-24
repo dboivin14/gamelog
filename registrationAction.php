@@ -1,34 +1,14 @@
 <?php
 
-if (empty($_POST["fname"])) {
-	die("first name required");
-}
+$firstname = $_POST ["fname"];
+$lastname = $_POST ["lname"];
+$dob = $_POST ["dob"];
+$email = $_POST ["email"];
+$username = $_POST ["user"];
+$password = $_POST ["pwd"];
 
-if (empty($_POST["lname"])) {
-	die("last name required");
-}
+var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
-if (empty($_POST["user"])) {
-	die("username required");
-}
-
-if (empty($_POST["dob"])) {
-	die("date of birth required required");
-}
-
-if (empty($_POST["pswd"])) {
-	die("password required");
-}
-
-if($_POST["pwd"] !== $_POST["pswd"]) {
-	die("Passwords must match");
-}
-
-if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) {
-	die("Valid email required");
-
-}
-;
 $password_hash = password_hash($_POST["pswd"], PASSWORD_DEFAULT);
 
 $mysqli require __DIR__ . "DBCONNECT.php";
