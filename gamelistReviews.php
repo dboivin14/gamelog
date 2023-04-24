@@ -4,7 +4,7 @@
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
 $sql = 'SELECT GameID, rating, UserID, reviewtext, Date FROM reviews';
-$result= query($sql);
+$result= query($sql) as $num_rows;
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->num_rows > 0) {
