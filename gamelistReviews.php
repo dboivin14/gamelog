@@ -1,7 +1,7 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-require 'DBConnect.php';
+include 'DBConnect.php';
 $sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
 $result = queryDB($sql);
 $colCount = 0;
