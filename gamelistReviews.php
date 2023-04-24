@@ -41,7 +41,7 @@ if (gettype($result) == "object") {
   
 }function convert_multi_array($array) {
     $imploded = array();
-    foreach($arrays as $array) {
+    foreach($result as $array) {
         $imploded[] = implode('~', $array);
     }
     return implode("&", $imploded);
