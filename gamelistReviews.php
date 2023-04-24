@@ -2,9 +2,10 @@
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
 include 'sqlpassword.php';
-$db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
-$sql = "SELECT * GameID, GameName, UserID, reviewtext, Date FROM reviews";
-$result = mysqli_query($db,$sql);
+$db = new mysqli('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
+$db->set_charset('utf8');
+$sql = 'SELECT GameID, rating, UserID, reviewtext, Date FROM reviews';
+$result= mysqli_query($db, $sql);
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->num_rows > 0) {
