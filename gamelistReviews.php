@@ -3,7 +3,7 @@
 
 include 'sqlpassword.php';
 $sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
-$result = query($sql);
+$result = queryDB($sql);
 $colCount = 0;
 if (gettype($result) == "object") {
   //if ($result->num_rows > 0) {
