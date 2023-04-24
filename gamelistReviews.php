@@ -1,7 +1,7 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-include 'sqlpassword.php';
+include 'DBConnect.php';
 $db = new mysqli('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
 $sql = 'SELECT GameID, rating, UserID, reviewtext, Date FROM reviews';
 $result= mysqli_query( $db, $sql);
