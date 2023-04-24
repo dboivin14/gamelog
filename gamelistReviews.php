@@ -37,7 +37,8 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  echo implode($result);
+  $data = implode($result);
+  echo $data;
   
 }
 ?>
