@@ -25,7 +25,7 @@ if($_POST["pwd"] !== $_POST["pswd"]) {
 }
 
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) {
-	die("Valid email required");
+	die("Valid email required")
 
 }
 
