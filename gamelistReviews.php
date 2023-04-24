@@ -1,4 +1,4 @@
-<?php include 'index.php'; if (isset($_GET['msg']))
+<?php include 'index.php';include("sqlpassword.php");if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
 require 'DBConnect.php';
