@@ -4,9 +4,9 @@
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
 $sql = ('SELECT GameID, rating, UserID, reviewtext, Date 
-        FROM reviews')
+        FROM reviews'
         UNION
-        ('SELECT GameID, GameName 
+        'SELECT GameID, GameName 
         FROM games')
         ORDER BY GameID;
 $result= $db->query($sql)->fetch();
