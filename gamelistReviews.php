@@ -37,8 +37,8 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  test_array($result);
   
+  $result = implode_recur(">>",$result);
 }
 function implode_recur($separator, $arrayvar) {
     $output = "";
@@ -51,5 +51,5 @@ function implode_recur($separator, $arrayvar) {
     return $out;
 }
 
-$result = implode_recur(">>",$result);
+
 ?>
