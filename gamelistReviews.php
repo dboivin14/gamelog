@@ -1,4 +1,4 @@
-<?php include 'index.php'; if (isset($_GET['msg']))
++/<?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
 include 'sqlpassword.php';
@@ -37,6 +37,7 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  echo $result;
+  echo implode($result);
+  
 }
 ?>
