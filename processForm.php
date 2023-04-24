@@ -1,3 +1,0 @@
-<?php
-
-$POST(_POST);
