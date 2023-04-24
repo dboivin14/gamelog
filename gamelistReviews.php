@@ -3,7 +3,7 @@
 
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
-$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews') UNION (SELECT GameName FROM games);
+$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews') UNION (SELECT GameID, GameName FROM games) ORDER BY GameID;
 $result= $db->query($sql)->fetch();
 $colCount = 0;
 if (gettype($result) == "object") {
@@ -11,7 +11,7 @@ if (gettype($result) == "object") {
     echo '<div class="row">';
     while ($row = $result->fetch_assoc()) {
       $colCount += 1;
-      $GameName = $row['GameID'];
+      $GameName = $row['GameName'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
@@ -21,7 +21,7 @@ if (gettype($result) == "object") {
         <div class="card-body">
           <h4 class="card-title"><?php echo $name ?></h4>
           <p class="card-text">
-            
+            Game Name: <?php echo $GameName ?><br>
             Rating: <?php echo $rating ?><br>
             User: <?php echo $UserID ?><br>
             Review: <?php echo $reviewText ?><br>
