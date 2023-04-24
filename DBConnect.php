@@ -2,17 +2,17 @@
 
 //connection string
 $servername = "localhost";
-$username = "mahadev";
-$password = "mahadev";
+$sqluser = "mahadev";
+$sqlpassword = "mahadev";
 $dbname = "gamelogapp";
 $conn;
 
 // APIs 
 function openDB() {
-  global $servername, $username, $password, $dbname, $conn;
+  global $servername, $sqluser, $sqlpassword, $dbname, $conn;
 
 // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
+  $conn = new mysqli($servername, $sqluser, $sqlpassword, $dbname);
   if ($conn->connect_error)
     return $conn->connect_error;
   else
