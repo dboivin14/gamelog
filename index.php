@@ -1,4 +1,4 @@
-<?php include("../sqlpassword.php");
+<?php include("/sqlpassword.php");
 $db = new PDO('mysql:host=locoalhost;dbname=gamelogapp;charset=utf8', $username, $password);?>
 <!DOCTYPE html>
 <html>
