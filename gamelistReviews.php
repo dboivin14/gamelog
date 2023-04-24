@@ -44,9 +44,9 @@ function implode_recur($separator, $arrayvar) {
     $output = "";
     foreach ($arrayvar as $av)
     if (is_array ($av)) 
-        $out .= implode_recur($separator, $av); // Recursive array 
+        $output .= implode_recur($separator, $av); // Recursive array 
     else                   
-        $out .= $separator.$av;
+        $output .= $separator.$av;
 
     return $out;
 }
