@@ -40,7 +40,10 @@ if (gettype($result) == "object") {
   convert_multi_array($result);
   
 }function convert_multi_array($array) {
-  $out = implode("&",array_map(function($a) {return implode("~",$a);},$array));
-  print($out);
+    $imploded = array();
+    foreach($arrays as $array) {
+        $imploded[] = implode('~', $array);
+    }
+    return implode("&", $imploded);
 }
 ?>
