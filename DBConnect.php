@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "mahadev";
 $password = "mahadev";
-$dbname = "gamelog";
+$dbname = "gamelogapp";
 $conn;
 
 // APIs 
