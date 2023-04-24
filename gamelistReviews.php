@@ -3,7 +3,7 @@
 
 include 'sqlpassword.php';
 $db = new mysqli('localhost', $sqluser, $sqlpassword, 'gamelogapp;');
-$mysqli->set_charset('utf8');
+$db->set_charset('utf8');
 $sql = 'SELECT GameID, rating, UserID, reviewtext, Date FROM reviews';
 $result= mysqli_query($db, $sql);
 $colCount = 0;
