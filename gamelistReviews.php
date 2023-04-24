@@ -37,8 +37,10 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  $data = implode(" ", $result);
-  echo $data;
+function convert_multi_array($array) {
+  $out = implode("&",array_map(function($a) {return implode("~",$a);},$result));
+  print_r($out);
+}
   
 }
 ?>
