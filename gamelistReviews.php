@@ -32,7 +32,7 @@ if (gettype($result) == "object") {
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
       }
-    }
+    //}
     echo '</div>';
   }
 } else {
