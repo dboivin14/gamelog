@@ -1,4 +1,4 @@
-include("sqlpassword.php");
+<?php include("sqlpassword.php");?>
 <!DOCTYPE html>
 <html>
   <head>
