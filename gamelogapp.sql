@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 27, 2023 at 04:37 PM
+-- Generation Time: Apr 10, 2023 at 04:04 PM
 -- Server version: 8.0.32-0ubuntu0.20.04.2
 -- PHP Version: 7.4.3-4ubuntu2.18
 
@@ -19,8 +19,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `dylanb`
+-- Database: `gamelogapp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `games`
+--
+
+CREATE TABLE `games` (
+  `GameID` int NOT NULL,
+  `GameName` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -32,7 +43,7 @@ CREATE TABLE `reviews` (
   `ReviewID` varchar(24) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `UserID` int NOT NULL,
   `rating` int NOT NULL,
-  `AppID` int NOT NULL,
+  `GameID` int NOT NULL,
   `reviewtext` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -46,7 +57,7 @@ CREATE TABLE `reviews` (
 CREATE TABLE `usergames` (
   `UserGamesID` int NOT NULL,
   `UserID` int NOT NULL,
-  `AppID` int NOT NULL,
+  `GameID` int NOT NULL,
   `Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -74,12 +85,18 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `games`
+--
+ALTER TABLE `games`
+  ADD PRIMARY KEY (`GameID`);
+
+--
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`ReviewID`),
   ADD KEY `UserID` (`UserID`),
-  ADD KEY `AppID` (`AppID`);
+  ADD KEY `AppID` (`GameID`);
 
 --
 -- Indexes for table `usergames`
@@ -87,7 +104,7 @@ ALTER TABLE `reviews`
 ALTER TABLE `usergames`
   ADD PRIMARY KEY (`UserGamesID`),
   ADD UNIQUE KEY `UserID` (`UserID`),
-  ADD KEY `AppID` (`AppID`);
+  ADD KEY `AppID` (`GameID`);
 
 --
 -- Indexes for table `users`
@@ -110,7 +127,23 @@ ALTER TABLE `usergames`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `UserID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`GameID`) REFERENCES `games` (`GameID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `usergames`
+--
+ALTER TABLE `usergames`
+  ADD CONSTRAINT `usergames_ibfk_1` FOREIGN KEY (`GameID`) REFERENCES `games` (`GameID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
