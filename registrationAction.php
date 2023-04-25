@@ -11,7 +11,7 @@ var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
 
 
-require __DIR__ . "DBCONNECT.php";
+include("sqlpassword.php");
 
 
 $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
