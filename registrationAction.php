@@ -1,11 +1,11 @@
 <?php
 
-$firstname = $_POST ["fname"];
-$lastname = $_POST ["lname"];
+$firstname = $_POST ["firstname"];
+$lastname = $_POST ["lastname"];
 $dob = $_POST ["dob"];
 $email = $_POST ["email"];
-$username = $_POST ["user"];
-$password = $_POST ["pwd"];
+$username = $_POST ["username"];
+$password = $_POST ["password"];
 
 var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
