@@ -5,31 +5,26 @@ $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEF
   
   $result= $db->prepare($sql);
   $result->execute();
-  //$count = ($result->columnCount());
-  //echo ($count);
+
 $colCount = 0;
 if (gettype($result) == "object") {
-  if ($result->columnCount() > 0) {
+  if ($result->rowCount() > 0) {
     $result= '<div class="row">';
     
     
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
-      $gamename = $row['gamename'];
-      $UserID = $row['UserID'];
-      $rating = $row['rating'];
-      $reviewText = $row['reviewtext'];
-      $Date = $row['Date'];
+
       ?>
       <div class="col card">
         <div class="card-body">
-          <h4 class="card-title"><?php echo $GameID ?></h4>
+          <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
           <p class="card-text">
-            Game Name: <?php echo $gamename ?><br>
-            Rating: <?php echo $rating ?><br>
-            User: <?php echo $UserID ?><br>
-            Review: <?php echo $reviewText ?><br>
-            Date Created: <?php echo $Date ?>
+            Game Name: <?php echo $row['gamename'] ?><br>
+            Rating: <?php echo $row['rating'] ?><br>
+            User: <?php echo $row['UserID'] ?><br>
+            Review: <?php echo $row['reviewText'] ?><br>
+            Date Created: <?php echo $row['Date'] ?>
           </p>
         </div>
       </div>
