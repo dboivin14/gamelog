@@ -14,9 +14,9 @@ $result = $db -> prepare('
   //$result= $db->query($sql);
   $result-> execute();
 $colCount = 0;
-if (gettype($result) == "object") {
-  if ($result->num_rows > 0) {
-    echo '<div class="row">';
+//if (gettype($result) == "object") {
+//  if ($result->num_rows > 0) {
+//    echo '<div class="row">';
     while ($row = $result->fetch(PDO::FETCH_NUM)) {
       $colCount += 1;
       $GameName = $row['GameName'];
@@ -42,12 +42,12 @@ if (gettype($result) == "object") {
         echo '</div><div class="row">';
       }
     }
-    echo '</div>';
-  }
-} else {
-  $result;
+//    echo '</div>';
+//  }
+//} else {
+//  $result;
  
-}
-echo json_encode($result);
+//}
+//echo json_encode($result);
 
 ?>
