@@ -56,12 +56,12 @@ $sql = "SELECT gamename FROM games";
 $result = $db->prepare($sql);
 $result->execute();
 $colCount = 0;
-if (gettype($result) == "object") {
+if ($result->rowCount() > 0) {
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   //$gamename = $row['gamename'];
 print_r($row);
 $colCount =+ 1;
-foreach($db as $row){
+//foreach($db as $row){
   ?>
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
@@ -73,7 +73,7 @@ foreach($db as $row){
 <?php
 }
 }
-}
+//}
 
  ?>
   <script>
