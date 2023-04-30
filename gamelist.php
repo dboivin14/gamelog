@@ -51,12 +51,12 @@
       <th style="width:40%;">Rating</th>
     </tr>
 <?php 
-$sql = "SELECT * FROM games";
+$sql = "SELECT GameName FROM games";
 
 $result = $db->prepare($sql);
 $result->execute();
 
-
+if (gettype($result) == "object") {
 while ($row = $result->fetchAll()){
   //$GameName = $row['GameName'];
 
@@ -64,14 +64,14 @@ while ($row = $result->fetchAll()){
 //foreach($db as $row){
   ?>
     <tr>
-      <td><?php echo $row."<br />\n"?></td>
+      <td><?php echo $row['GameName']."<br />\n"?></td>
       <td>##</td>
     </tr>
   </table>
 
   
 <?php
-//}
+}
 
 }
 
