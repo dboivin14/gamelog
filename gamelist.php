@@ -61,7 +61,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   //$gamename = $row['gamename'];
 print_r($row);
 $colCount =+ 1;
-//foreach($db as $row){
+foreach($db as $row){
   ?>
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
@@ -73,7 +73,7 @@ $colCount =+ 1;
 <?php
 }
 }
-//}
+}
 
  ?>
   <script>
