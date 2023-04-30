@@ -64,8 +64,8 @@ $colCount =+ 1;
 //foreach($db as $row){
   ?>
     <tr>
-      <td><?php echo $row['gamename']?></td>
-      <td>##</td>
+      <td><?php echo $row['gamename']."<br />\n"?></td>
+      <td><?php echo $row['GameID']."<br />\n"?></td>
     </tr>
   </table>
 
