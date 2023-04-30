@@ -1,4 +1,4 @@
-<?php include 'index.html'; ?>
+<?php include 'index.php'; ?>
 <div class="container w-75 mt-3">
   <h3>Create an account</h3>
   <p>Please complete and submit the form.</p>

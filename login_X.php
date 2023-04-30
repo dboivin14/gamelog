@@ -1,4 +1,4 @@
-<?php include 'index.html'; ?>
+<?php include 'index.php'; ?>
 
 <head>
     <Title>Sign in to your account</Title>

@@ -1,19 +1,37 @@
 <?php
 
-require "DBConnect.php";
+$firstname = $_POST ["firstname"];
+$lastname = $_POST ["lastname"];
+$dob = $_POST ["dob"];
+$email = $_POST ["email"];
+$username = $_POST ["username"];
+$password = $_POST ["password"];
 
-// collect form data
-$fname = $_POST["fname"];
-$lname = $_POST["lname"];
-$dob = $_POST["dob"];
-$email = $_POST["email"];
-$username = $_POST["user"];
-$pwd = $_POST["pswd"];
+var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
-$verified = 0;
-$usertype = 1;
 
-$sql = "insert into customerregister values customerID, '" . $username . "', '" . $pwd . "', '" .
-  $fname . "', '" . $lname . "','" . $dob . "','" . $email . "', '" . $verified . "' '" . $usertype . "'";
-echo modifyDB($sql) . "<br>Use back button to return";
+require __DIR__ . "DBCONNECT.php";
+//include("sqlpassword.php"); //Note from Spencer, needs to use this file here
+//$db = new PDO('mysql:host=localhost;dbname=enter database name here;charset=utf8', $id, $password);
+
+$sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
+		VALUES (?,?,?,?,?,?)";
+$stmt = mysqli_stmt_init($conn);
+
+
+mysqli_stmt_bind_param($stmt, "sssss",
+					   $username,
+					   $email,
+					   $firstname,
+					   $lastname,
+					   $password,
+					   $dob);
+
+mysqli_stmt_execute($stmt);
+
+
+
+
+
+
 ?>

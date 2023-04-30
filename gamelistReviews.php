@@ -1,26 +1,28 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-require 'DBConnect.php';
-$sql = "select GameID, GameName, UserID, reviewtext, Date from reviews";
-$result = queryDB($sql);
+include 'sqlpassword.php';
+$db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
+$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
+  //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
+$result= $db->query($sql)->fetch();
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->num_rows > 0) {
     echo '<div class="row">';
     while ($row = $result->fetch_assoc()) {
       $colCount += 1;
-      $name = $row['GameName'];
+      $GameName = $row['GameName'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
-      $date = $row['Date'];
+      $Date = $row['Date'];
       ?>
       <div class="col card">
         <div class="card-body">
           <h4 class="card-title"><?php echo $name ?></h4>
           <p class="card-text">
-            Name: <?php echo $GameName ?><br>
+            Game Name: <?php echo $GameName ?><br>
             Rating: <?php echo $rating ?><br>
             User: <?php echo $UserID ?><br>
             Review: <?php echo $reviewText ?><br>
@@ -36,11 +38,8 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  echo $result;
+  $result;
+ 
 }
+echo json_encode($result);
 ?>
-
-
-
-</body>
-</html>

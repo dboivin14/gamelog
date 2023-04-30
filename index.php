@@ -1,4 +1,5 @@
-include("sqlpassword.php");
+<?php include("sqlpassword.php");
+$db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);?>
 <!DOCTYPE html>
 <html>
   <head>
