@@ -27,9 +27,8 @@ if (gettype($result) == "object") {
           </p>
         </div>
 <?php
-    $rows = $result->fetchAll();
-    foreach($rows as $row){
-    //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       print_r("1");
       $colCount += 1;
 
