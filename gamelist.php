@@ -48,9 +48,9 @@
 
 <?php 
 $sql = "SELECT GameID, gamename FROM games";
-$id = 16;
+//$id = 16;
 $result = $db->prepare($sql);
-$result->execute([$id]);
+$result->execute();
 $colCount = 0;
 if ($result->rowCount() > 0) {
   ?>
