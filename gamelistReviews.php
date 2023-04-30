@@ -47,7 +47,7 @@ if (gettype($result) == "object") {
   }
 } else {
   $result;
-  
+  print_r($row);
 }
 //echo json_encode($result);
 
