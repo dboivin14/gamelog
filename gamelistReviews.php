@@ -16,7 +16,7 @@ $result = $db -> prepare('
 $colCount = 0;
 //if (gettype($result) == "object") {
 //  if ($result->num_rows > 0) {
-//    echo '<div class="row">';
+    echo '<div class="row">';
     while ($row = $result->fetchall(PDO::FETCH_ASSOC)) {
       $colCount += 1;
       $GameName = $row['GameName'];
@@ -38,9 +38,9 @@ $colCount = 0;
         </div>
       </div>
       <?php
-      //if ($colCount%2 == 0) {
-      //  echo '</div><div class="row">';
-      //}
+      if ($colCount%2 == 0) {
+        echo '</div><div class="row">';
+      }
       print_r($row);
     }
 //    echo '</div>';
