@@ -51,13 +51,13 @@
       <th style="width:40%;">Rating</th>
     </tr>
 <?php 
-$sql = "SELECT GameID, gamename FROM games";
+$sql = "SELECT gamename FROM games";
 
 $result = $db->prepare($sql);
 $result->execute();
 $colCount = 0;
 if (gettype($result) == "object") {
-while ($row = $result->fetch()){
+while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   //$gamename = $row['gamename'];
 print_r($row);
 $colCount =+ 1;
