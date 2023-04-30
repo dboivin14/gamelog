@@ -10,7 +10,7 @@ $sql = $db->prepare('
    UNION
    (SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)
    ');
-  //$result= $db->query($sql)->fetch();
+  $result= $db->query($sql)->fetch();
 $colCount = 0;
 if (gettype($sql) == "object") {
   if ($sql->num_rows > 0) {
