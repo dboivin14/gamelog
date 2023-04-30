@@ -61,7 +61,7 @@ while ($row = $result->fetch()){
   //$gamename = $row['gamename'];
 print_r($row)
 
-//foreach($db as $row){
+foreach($db as $row){
   ?>
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
@@ -72,7 +72,7 @@ print_r($row)
   
 <?php
 }
-
+}
 }
 
  ?>
