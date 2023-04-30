@@ -54,6 +54,7 @@
 $sql = "SELECT GameName FROM games";
 
 $result = $db->query($sql);
+$current = $result->fetch(PDO::FETCH_ASSOC);
 
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
@@ -88,7 +89,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   }
   </script>
 <?php 
-$result = $row;
+$current = $row;
 }
 
   echo $result;
