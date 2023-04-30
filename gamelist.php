@@ -60,7 +60,7 @@ $colCount =+ 1;
 //foreach($db as $row){
   ?>
     <table id="myTable">
-    <tr class="header">
+    <tr COLSPAN=1 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
       <th style="width:40%;">Rating</th>
     </tr>
