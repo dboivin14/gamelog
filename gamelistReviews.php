@@ -1,7 +1,7 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-$sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID";
+$sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
   $result= $db->prepare($sql);
   $result->execute();
