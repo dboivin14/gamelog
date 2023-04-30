@@ -55,13 +55,13 @@ $sql = "SELECT gamename FROM games";
 
 $result = $db->prepare($sql);
 $result->execute();
-
+$colCount = 0;
 if (gettype($result) == "object") {
 while ($row = $result->fetch()){
   //$gamename = $row['gamename'];
 print_r($row);
-
-foreach($db as $row){
+$colCount =+ 1;
+//foreach($db as $row){
   ?>
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
@@ -73,7 +73,7 @@ foreach($db as $row){
 <?php
 }
 }
-}
+//}
 
  ?>
   <script>
