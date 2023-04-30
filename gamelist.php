@@ -88,8 +88,9 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   }
   </script>
 <?php 
-
+$result = $row;
 }
+
   echo $result;
  ?>
 
