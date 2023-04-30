@@ -64,7 +64,7 @@ while ($row = $result->fetchAll()){
 //foreach($db as $row){
   ?>
     <tr>
-      <td><?php echo $row['$GameName']."<br />\n"?></td>
+      <td><?php echo $row['GameName']."<br />\n"?></td>
       <td>##</td>
     </tr>
   </table>
