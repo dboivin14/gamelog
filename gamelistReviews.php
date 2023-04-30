@@ -15,7 +15,7 @@ $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->columnCount() > 0) {
     echo '<div class="row">';
-    while ($row = $result->fetch_assoc) {
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
@@ -49,7 +49,7 @@ if (gettype($result) == "object") {
   print_r($row);
 }
 print_r($result);
-//echo json_encode($result);
+echo json_decode($result);
 
 ?>
 
