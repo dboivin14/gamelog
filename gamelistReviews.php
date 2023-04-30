@@ -1,8 +1,6 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-include 'sqlpassword.php';
-$db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
 $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
   $result= $db->prepare($sql);
@@ -17,7 +15,7 @@ if (gettype($result) == "object") {
     
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
-      $GameName = $row['GameName'];
+      $gamename = $row['gamename'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
@@ -27,7 +25,7 @@ if (gettype($result) == "object") {
         <div class="card-body">
           <h4 class="card-title"><?php echo $GameID ?></h4>
           <p class="card-text">
-            Game Name: <?php echo $GameName ?><br>
+            Game Name: <?php echo $gamename ?><br>
             Rating: <?php echo $rating ?><br>
             User: <?php echo $UserID ?><br>
             Review: <?php echo $reviewText ?><br>
