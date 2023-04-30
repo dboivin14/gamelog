@@ -45,7 +45,7 @@ $colCount = 0;
     echo '</div>';
 //  }
 //} else {
-//  $result;
+  $result;
  
 //}
 //echo json_encode($result);
