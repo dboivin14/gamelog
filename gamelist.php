@@ -57,7 +57,7 @@ $result = $db->prepare($sql);
 $result->execute();
 
 if (gettype($result) == "object") {
-while ($row = $result->fetchAll()){
+while ($row = $result->fetch()){
   //$gamename = $row['gamename'];
 print_r($row)
 
