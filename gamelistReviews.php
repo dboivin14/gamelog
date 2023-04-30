@@ -44,6 +44,7 @@ if (gettype($result) == "object") {
     </div>
   </div>
     <?php
+   $count -= 1;
   }
 } else {
   echo $result;
