@@ -68,6 +68,12 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     </tr>
   </table>
 
+  
+<?php 
+$current = $row;
+}
+
+ ?>
   <script>
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
@@ -88,12 +94,6 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     }
   }
   </script>
-<?php 
-$current = $row;
-}
-
-  echo $result;
- ?>
 
 </body>
 </html>
