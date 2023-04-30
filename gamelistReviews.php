@@ -26,7 +26,7 @@ $colCount = 0;
       ?>
       <div class="col card">
         <div class="card-body">
-          <h4 class="card-title"><?php echo $name ?></h4>
+          <h4 class="card-title"><?php echo $GameID ?></h4>
           <p class="card-text">
             Game Name: <?php echo $GameName ?><br>
             Rating: <?php echo $rating ?><br>
@@ -36,6 +36,7 @@ $colCount = 0;
           </p>
         </div>
       </div>
+      print_r($row);
       <?php
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
@@ -46,7 +47,7 @@ $colCount = 0;
 //  }
 //} else {
 //  $result;
-  print_r($row);
+  
 //}
 //echo json_encode($result);
 
