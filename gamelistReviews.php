@@ -3,9 +3,14 @@
 
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
-$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
+  //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
-$result= $db->query($sql)->fetch();
+$sql = $db->prepare(' 
+   (SELECT GameID, rating, UserID, reviewtext, Date FROM reviews WHERE GameID = :gameID ORDER BY gameID DESC)
+   UNION
+   (SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)
+   ');
+  //$result= $db->query($sql)->fetch();
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->num_rows > 0) {
