@@ -53,8 +53,8 @@
 <?php 
 $sql = "SELECT GameName FROM games";
 
-$result = $db->query($sql);
-//$result->execute();
+$result = $db->prepare($sql);
+$result->execute();
 
 
 while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){

@@ -5,8 +5,8 @@ include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
 $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
-  $result= $db->query($sql);
-
+  $result= $db->prepare($sql);
+  $result->execute();
   //$count = ($result->columnCount());
   //echo ($count);
 $colCount = 0;
