@@ -8,7 +8,7 @@ $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, 
 $sql = ('(SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC)'
         . 'LEFT JOIN'
         . '(SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)'
-        //. 'USING GameID'
+        . 'USING GameID'
         );
   
   $result= $db->prepare($sql);
