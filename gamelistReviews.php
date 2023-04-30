@@ -17,6 +17,7 @@ if (gettype($result) == "object") {
   
 <?php              
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+      print_r("1");
       $colCount += 1;
 
       ?>
