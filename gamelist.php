@@ -55,17 +55,17 @@ $sql = "SELECT GameName FROM games";
 
 $query = $db->prepare($sql);
 $query->execute();
-$result = $query->fetchall();
 
-while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){
-  $GameName = $row['GameName'];
+
+while ($result = $query->fetchall()){
+  $GameName = $result['GameName'];
 
     ?>
 <?php
-foreach($db as $row){
+foreach($db as $result){
   ?>
     <tr>
-      <td><?php echo $row['$GameName']."<br />\n"?></td>
+      <td><?php echo $result['$GameName']."<br />\n"?></td>
       <td>##</td>
     </tr>
   </table>
@@ -73,7 +73,7 @@ foreach($db as $row){
   
 <?php
 }
-$current = $row;
+
 }
 
  ?>
