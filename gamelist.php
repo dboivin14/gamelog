@@ -61,7 +61,7 @@ while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
 
 
-//foreach($db as $row){
+foreach($db as $row){
   ?>
     <tr>
       <td><?php echo $GameName."<br />\n"?></td>
@@ -71,7 +71,7 @@ while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){
 
   
 <?php
-//}
+}
 
 }
 
