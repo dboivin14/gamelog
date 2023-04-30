@@ -3,14 +3,12 @@
 
 include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
-  //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
-  //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
 $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
   $result= $db->query($sql);
-  //$result-> execute();
-  $count = ($result->columnCount());
-  echo ($count);
+
+  //$count = ($result->columnCount());
+  //echo ($count);
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->columnCount() > 0) {
@@ -49,8 +47,8 @@ if (gettype($result) == "object") {
   print_r($row);
 }
 print_r($result);
-json_decode(json_encode($result));
 
+echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 ?>
 
 </body>
