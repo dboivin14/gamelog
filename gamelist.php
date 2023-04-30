@@ -52,9 +52,9 @@
     </tr>
 <?php 
 $sql = "SELECT GameID, gamename FROM games";
-
+$id = 16;
 $result = $db->prepare($sql);
-$result->execute();
+$result->execute([$id]);
 $colCount = 0;
 if ($result->rowCount() > 0) {
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
