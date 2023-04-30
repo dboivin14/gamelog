@@ -48,7 +48,7 @@ if (gettype($result) == "object") {
 }
 print_r($result);
 
-echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+print_r($result->errorInfo());
 ?>
 
 </body>
