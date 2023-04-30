@@ -21,7 +21,7 @@ if (gettype($result) == "object") {
       $reviewText = $row['reviewtext'];
       $Date = $row['Date'];
       ?>
-      <div class="col card">
+      <div class="card">
         <div class="card-body">
           <h4 class="card-title"><?php echo $GameID ?></h4>
           <p class="card-text">
@@ -48,7 +48,7 @@ if (gettype($result) == "object") {
 }
 print_r($result);
 
-print_r($db->errorInfo());
+//print_r($db->errorInfo());
 ?>
 
 </body>
