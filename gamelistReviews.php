@@ -3,11 +3,12 @@
 
 $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
-  $result= $db->prepare($sql);
-  $result->execute();
+  
   
   $count = $db->query("SELECT count(*) FROM reviews")->fetchColumn();
   echo $count;
+  $result= $db->prepare($sql);
+  $result->execute();
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($count > 0) {
