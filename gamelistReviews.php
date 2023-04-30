@@ -40,9 +40,9 @@ if (gettype($result) == "object") {
   }
 } else {
   echo $result;
-  print_r($row);
+
 }
-print_r($result);
+
 
 //print_r($db->errorInfo());
 ?>
