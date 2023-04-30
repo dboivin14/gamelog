@@ -10,13 +10,14 @@ $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->rowCount() > 0) {
     $result= '<div class="row">';
-    
-    
+?>    
+      <div class="col card">
+<?php              
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
 
       ?>
-      <div class="col card">
+
         <div class="card-body">
           <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
           <p class="card-text">
