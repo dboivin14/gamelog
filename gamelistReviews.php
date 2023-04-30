@@ -6,9 +6,9 @@ $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, 
   //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
 $sql = ('(SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC)'
-        //. 'LEFT JOIN'
-        //. '(SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)'
-        //. 'USING (GameID)'
+        . 'LEFT JOIN'
+        . '(SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)'
+        //. 'USING GameID'
         );
   
   $result= $db->prepare($sql);
@@ -19,7 +19,7 @@ if (gettype($result) == "object") {
     echo '<div class="row">';
     while ($row = $result->fetchall(PDO::FETCH_ASSOC)) {
       $colCount += 1;
-      $GameName = $row['GameName'];
+      //$GameName = $row['GameName'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
