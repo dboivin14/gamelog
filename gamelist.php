@@ -51,7 +51,7 @@
       <th style="width:40%;">Rating</th>
     </tr>
 <?php 
-$sql = "SELECT GameID, gamename FROM games LIMIT 1";
+$sql = "SELECT GameID, gamename FROM games LIMIT 2";
 $id = 16;
 $result = $db->prepare($sql);
 $result->execute([$id]);
