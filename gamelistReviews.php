@@ -6,10 +6,7 @@ $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, 
 $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
   $result= $db->query($sql);
-$row = $result->fetch(PDO::FETCH_ASSOC);
-    foreach($result as $row) {
-        print $row;
-      }
+
   //$count = ($result->columnCount());
   //echo ($count);
 $colCount = 0;
@@ -48,7 +45,7 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  return $result;
+  echo $result;
   print_r($row);
 }
 print_r($result);
