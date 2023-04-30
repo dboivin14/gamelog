@@ -28,7 +28,7 @@ if (gettype($result) == "object") {
         </div>
 <?php
     $row = $result->fetchAll();
-    foreach($row as $db){
+    foreach($row as $result){
     //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       print_r("1");
       $colCount += 1;
@@ -58,7 +58,7 @@ if (gettype($result) == "object") {
     </div>
   </div>
     <?php
-   $count -= 1;
+
   }
 //} else {
 //  echo $result;
@@ -66,7 +66,7 @@ if (gettype($result) == "object") {
 //}
 
 
-print_r($db->errorInfo());
+//print_r($db->errorInfo());
 ?>
 
 </body>
