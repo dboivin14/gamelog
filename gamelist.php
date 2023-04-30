@@ -47,7 +47,7 @@
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
 
 <?php 
-$sql = "SELECT * FROM games LEFT JOIN rating, reviews.GameID FROM reviews ON reviews.GameID = games.GameID";
+$sql = "SELECT * FROM games LEFT JOIN reviews ON reviews.GameID = games.GameID";
 //$id = 16;
 $result = $db->prepare($sql);
 $result->execute();
