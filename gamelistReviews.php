@@ -6,8 +6,8 @@ $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEF
   $result= $db->prepare($sql);
   $result->execute();
   
-  $count = "SELECT count(*) FROM reviews";
-  echo ($count);
+  $count = $db->query("SELECT count(*) FROM reviews")->fetchColumn();
+  echo $count;
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($count > 0) {
