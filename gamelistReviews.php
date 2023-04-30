@@ -19,7 +19,7 @@ if (gettype($result) == "object") {
     echo '<div class="row">';
     while ($row = $result->fetchall(PDO::FETCH_ASSOC)) {
       $colCount += 1;
-      //$GameName = $row['GameName'];
+      $GameName = $row['GameName'];
       $UserID = $row['UserID'];
       $rating = $row['rating'];
       $reviewText = $row['reviewtext'];
