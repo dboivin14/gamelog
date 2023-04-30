@@ -61,7 +61,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
 
     ?>
 <?php
-foreach($data as $row){
+foreach($db as $row){
   ?>
     <tr>
       <td><?php echo $row['$GameName']?></td>
