@@ -5,17 +5,18 @@ include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
   //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
-$sql = $db->prepare(' 
+$sql = (' 
    (SELECT GameID, rating, UserID, reviewtext, Date FROM reviews WHERE GameID = :gameID ORDER BY gameID DESC)
    UNION
    (SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)
    ');
-  $result= $db->query($sql);
+  $result= $db->prepare($sql);
+  $result-> execute();
 $colCount = 0;
-if (gettype($sql) == "object") {
-  if ($sql->num_rows > 0) {
+if (gettype($result) == "object") {
+  if ($result->num_rows > 0) {
     echo '<div class="row">';
-    while ($row = $sql->fetch(PDO::FETCH_NUM)) {
+    while ($row = $result->fetch(PDO::FETCH_NUM)) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
@@ -43,9 +44,9 @@ if (gettype($sql) == "object") {
     echo '</div>';
   }
 } else {
-  $sql;
+  $result;
  
 }
-echo json_encode($sql);
+echo json_encode($result);
 
 ?>
