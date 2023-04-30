@@ -14,7 +14,7 @@ $sql = ('(SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY 
   $result-> execute();
 $colCount = 0;
 //if (gettype($result) == "object") {
-//  if ($result->num_rows > 0) {
+  if ($result->num_rows > 0) {
     echo '<div class="row">';
     while ($row = $result->fetchall(PDO::FETCH_ASSOC)) {
       $colCount += 1;
@@ -45,10 +45,10 @@ $colCount = 0;
     }
     echo '</div>';
 //  }
-//} else {
-//  $result;
+} else {
+  $result;
   
-//}
+}
 //echo json_encode($result);
 
 ?>
