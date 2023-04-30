@@ -51,7 +51,7 @@
       <th style="width:40%;">Rating</th>
     </tr>
 <?php 
-$sql = "SELECT gamename FROM games";
+$sql = "SELECT GameID, gamename FROM games";
 
 $result = $db->prepare($sql);
 $result->execute();
