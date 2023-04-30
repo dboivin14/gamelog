@@ -47,7 +47,7 @@ if (gettype($result) == "object") {
 }
 
 
-//print_r($db->errorInfo());
+print_r($db->errorInfo());
 ?>
 
 </body>
