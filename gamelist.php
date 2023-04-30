@@ -44,6 +44,7 @@
 <body>
 
 <h2>All Games</h2>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
 
 <?php 
 $sql = "SELECT GameName FROM games";
@@ -54,7 +55,6 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
 
     ?>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
 
   <table id="myTable">
     <tr class="header">
