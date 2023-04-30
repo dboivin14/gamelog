@@ -11,7 +11,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON reviews.GameID = games.GameID";
   $result->execute();
 $colCount = 0;
 if (gettype($result) == "object") {
-  if ($count > 0) {
+  if (@result->rowCount > 0) {
     //$result= '<div class="row">';
 ?>    
   
@@ -37,8 +37,8 @@ if (gettype($result) == "object") {
           <p class="card-text">
             Game Name: <?php echo $row['gamename'] ?><br>
             Rating: <?php echo $row['rating'] ?><br>
-            User: <?php echo $row['UserID'] ?><br>
-            Review: <?php echo $row['reviewText'] ?><br>
+            User: <?php echo $row['ReviewID'] ?><br>
+            Review: <?php echo $row['reviewtext'] ?><br>
             Date Created: <?php echo $row['Date'] ?>
           </p>
         </div>
