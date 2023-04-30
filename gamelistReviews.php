@@ -5,7 +5,7 @@ $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEF
   
   $result= $db->prepare($sql);
   $result->execute();
-
+  echo ($result->rowcount());
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->rowCount() > 0) {
