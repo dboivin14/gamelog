@@ -9,12 +9,12 @@ $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEF
   
   $result= $db->query($sql);
   //$result-> execute();
-  echo ($result->rowCount());
+  echo ($result->getIterator());
 $colCount = 0;
 if (gettype($result) == "object") {
-  if ($result->rowCount() >= 0) {
+  if ($result->getIterator() > 0) {
     echo '<div class="row">';
-    while ($row = $result->fetchall(PDO::FETCH_ASSOC)) {
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
