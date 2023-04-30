@@ -59,7 +59,7 @@ $result->execute();
 if (gettype($result) == "object") {
 while ($row = $result->fetchAll()){
   //$gamename = $row['gamename'];
-
+print_r($row)
 
 //foreach($db as $row){
   ?>
