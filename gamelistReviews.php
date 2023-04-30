@@ -5,11 +5,7 @@ include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
   //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
-$sql = ('(SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC)'
-        . 'LEFT JOIN'
-        . '(SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)'
-        . 'USING GameID'
-        );
+$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC LEFT JOIN SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC USING GameID');
   
   $result= $db->prepare($sql);
   $result-> execute();
