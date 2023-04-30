@@ -21,7 +21,7 @@ if (gettype($result) == "object") {
       $reviewText = $row['reviewtext'];
       $Date = $row['Date'];
       ?>
-      <div class="card">
+      <div class="col card">
         <div class="card-body">
           <h4 class="card-title"><?php echo $GameID ?></h4>
           <p class="card-text">
@@ -33,7 +33,9 @@ if (gettype($result) == "object") {
           </p>
         </div>
       </div>
-      
+      foreach($result as $row) {
+        print $row;
+      }
       <?php
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
