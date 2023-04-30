@@ -15,7 +15,7 @@ $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->columnCount() > 0) {
     echo '<div class="row">';
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $result->fetch_assoc) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
