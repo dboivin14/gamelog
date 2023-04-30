@@ -46,7 +46,7 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  return $result;
+  echo $result;
   
 }
 
