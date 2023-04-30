@@ -9,7 +9,8 @@ $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEF
   
   $result= $db->query($sql);
   //$result-> execute();
-  echo ($result->fetchColumn());
+  $count = ($result->fetchColumn());
+  echo ($count);
 $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->fetchColumn() > 0) {
