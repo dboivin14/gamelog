@@ -5,10 +5,12 @@ $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEF
   
   $result= $db->prepare($sql);
   $result->execute();
-  echo ($result->rowcount());
+  
+  $count = "SELECT count(*) FROM Reviews";
+  echo ($count);
 $colCount = 0;
 if (gettype($result) == "object") {
-  if ($result->rowCount() > 0) {
+  if ($count > 0) {
     //$result= '<div class="row">';
 ?>    
   <div class="card-group">    
