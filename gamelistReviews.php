@@ -59,7 +59,7 @@ if (gettype($result) == "object") {
    $count -= 1;
   }
 //} else {
-  echo $result;
+//  echo $result;
 
 //}
 
