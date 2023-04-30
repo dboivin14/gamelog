@@ -51,7 +51,7 @@
       <th style="width:40%;">Rating</th>
     </tr>
 <?php 
-$sql = "SELECT GameID, gamename FROM games";
+$sql = "SELECT GameID, gamename FROM games LIMIT 1";
 $id = 16;
 $result = $db->prepare($sql);
 $result->execute([$id]);
@@ -59,7 +59,7 @@ $colCount = 0;
 if ($result->rowCount() > 0) {
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   //$gamename = $row['gamename'];
-print_r($row);
+//print_r($row);
 $colCount =+ 1;
 //foreach($db as $row){
   ?>
