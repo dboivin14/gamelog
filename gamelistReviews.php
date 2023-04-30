@@ -46,9 +46,10 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  $result;
-  print_r($row);
+  return $result;
+  
 }
+print_r($row);
 //echo json_encode($result);
 
 ?>
