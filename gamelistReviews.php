@@ -11,7 +11,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON reviews.GameID = games.GameID";
   $result->execute();
 $colCount = 0;
 if (gettype($result) == "object") {
-  if ($count > 0) {
+//  if ($result->rowCount() > 0) {
     //$result= '<div class="row">';
 ?>    
   
@@ -58,10 +58,10 @@ if (gettype($result) == "object") {
     <?php
    $count -= 1;
   }
-} else {
+//} else {
   echo $result;
 
-}
+//}
 
 
 //print_r($db->errorInfo());
