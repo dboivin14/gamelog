@@ -43,12 +43,12 @@ $colCount = 0;
       }
       print_r($row);
     }
-//    echo '</div>';
+    echo '</div>';
 //  }
 //} else {
 //  $result;
  
 //}
-//echo json_encode($result);
+echo json_encode($result);
 
 ?>
