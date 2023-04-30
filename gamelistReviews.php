@@ -11,7 +11,8 @@ if (gettype($result) == "object") {
   if ($result->rowCount() > 0) {
     $result= '<div class="row">';
 ?>    
-      <div class="col card">
+  <div class="card-group">    
+    <div class="card">
 <?php              
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
@@ -39,6 +40,7 @@ if (gettype($result) == "object") {
     $result= '</div>';
     ?>
     </div>
+  </div>
     <?php
   }
 } else {
@@ -47,7 +49,7 @@ if (gettype($result) == "object") {
 }
 
 
-print_r($db->errorInfo());
+//print_r($db->errorInfo());
 ?>
 
 </body>
