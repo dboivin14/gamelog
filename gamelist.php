@@ -60,8 +60,7 @@ $result->execute();
 while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
 
-    ?>
-<?php
+
 foreach($db as $row){
   ?>
     <tr>
@@ -73,7 +72,7 @@ foreach($db as $row){
   
 <?php
 }
-$current = $row;
+
 }
 
  ?>
