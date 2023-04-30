@@ -5,12 +5,12 @@ include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
   //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
-$result = $db -> prepare('(SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC)'
+$sql = ('(SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC)'
         . 'LEFT JOIN'
         . '(SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)'
         . 'USING (GameID)');
   
-  //$result= $db->query($sql);
+  $result= $db->prepare($sql);
   $result-> execute();
 $colCount = 0;
 //if (gettype($result) == "object") {
