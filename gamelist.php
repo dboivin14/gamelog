@@ -60,16 +60,18 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
 
     ?>
-
-
+<?php
+foreach($data as $row){
+  ?>
     <tr>
-      <td><?php echo $GameName?></td>
+      <td><?php echo $row['$GameName']?></td>
       <td>##</td>
     </tr>
   </table>
 
   
-<?php 
+<?php
+}
 $current = $row;
 }
 
