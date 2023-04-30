@@ -13,6 +13,11 @@ $colCount = 0;
 if (gettype($result) == "object") {
   if ($result->columnCount() > 0) {
     echo '<div class="row">';
+    $row = $result->fetch(PDO::FETCH_ASSOC);
+    foreach($result as $row) {
+        print $row;
+      }
+    
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
       $GameName = $row['GameName'];
@@ -33,9 +38,7 @@ if (gettype($result) == "object") {
           </p>
         </div>
       </div>
-      foreach($result as $row) {
-        print $row;
-      }
+      
       <?php
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
