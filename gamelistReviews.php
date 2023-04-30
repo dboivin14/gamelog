@@ -35,7 +35,7 @@ if (gettype($result) == "object") {
           </p>
         </div>
       </div>
-      print_r($row);
+      
       <?php
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
@@ -46,7 +46,7 @@ if (gettype($result) == "object") {
   }
 } else {
   return $result;
-  
+  print_r($row);
 }
 print_r($result);
 //echo json_encode($result);
