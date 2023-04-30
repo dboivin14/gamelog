@@ -58,7 +58,7 @@ $query->execute();
 
 
 while ($result = $query->fetchall()){
-  $GameName = $result['GameName'];
+  $GameName = $query['GameName'];
 
     ?>
 <?php
