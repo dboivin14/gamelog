@@ -6,10 +6,10 @@ $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, 
   //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
 $sql = $db -> prepare(' 
-   (SELECT GameID, rating, UserID, reviewtext, Date FROM reviews WHERE GameID = :gameID ORDER BY gameID DESC)
-   UNION
+   (SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY gameID DESC)
+   LEFT JOIN
    (SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)
-   ');
+   USING (GameID)');
   $sql->bindParam(':gameID',$col_start);
   $result= $db->query($sql);
   $result-> execute();
