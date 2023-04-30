@@ -12,7 +12,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
 $colCount = 0;
 if (gettype($result) == "object") {
 //  if ($result->rowCount() > 0) {
-    //$result= '<div class="row">';
+    $result= '<div class="row">';
 ?>    
   <div class="card-group">    
     <div class="card">
@@ -47,9 +47,9 @@ if (gettype($result) == "object") {
       
       
       <?php
-      //if ($colCount%2 == 0) {
-      //  $result= '</div><div class="row">';
-      //}
+      if ($colCount%2 == 0) {
+        $result= '</div><div class="row">';
+      }
       
     }
     //$result= '</div>';
