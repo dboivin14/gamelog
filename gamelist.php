@@ -54,8 +54,8 @@
 $sql = "SELECT GameName FROM games";
 
 $result = $db->prepare($sql);
-$result->execute([$limit, $offset]);
-$current = $result->fetch(PDO::FETCH_ASSOC);
+$result->execute();
+$current = $result->fetchAll(PDO::FETCH_ASSOC);
 
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
