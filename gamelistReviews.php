@@ -5,7 +5,7 @@ include 'sqlpassword.php';
 $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, $sqlpassword );
   //$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews ORDER BY GameID');
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
-$sql = ('SELECT GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN SELECT GameID, GameName FROM games ON reviews.GameID = games.GameID');
+$sql = "SELECT rewviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
   $result= $db->prepare($sql);
   $result-> execute();
