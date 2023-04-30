@@ -45,67 +45,52 @@
 
 <h2>All Games</h2>
 
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
+<?php 
+$sql = "SELECT GameName FROM games";
 
-<table id="myTable">
-  <tr class="header">
-    <th style="width:60%;">Game</th>
-    <th style="width:40%;">Rating</th>
-  </tr>
-  <tr>
-    <td>Dredge</td>
-    <td>9.4</td>
-  </tr>
-  <tr>
-    <td>Hi-Fi Rush</td>
-    <td>9.0</td>
-  </tr>
-  <tr>
-    <td>Metroid Prime Remastered</td>
-    <td>8.8</td>
-  </tr>
-  <tr>
-    <td>Hogwarts Legacy</td>
-    <td>8.8</td>
-  </tr>
-  <tr>
-    <td>Dead Space</td>
-    <td>8.8</td>
-  </tr>
-  <tr>
-    <td>Persona 4 Golden</td>
-    <td>8.8</td>
-  </tr>
-  <tr>
-    <td>Kirby's Return to Dream Land Deluxe</td>
-    <td>8.7</td>
-  </tr>
-  <tr>
-    <td>Wild Hearts</td>
-    <td>8.6</td>
-  </tr>
-</table>
+$result = $db->query($sql);
 
-<script>
-function myFunction() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("myTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
+while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+  $GameName = $row['GameName'];
+
+    ?>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
+
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Game</th>
+      <th style="width:40%;">Rating</th>
+    </tr>
+    <tr>
+      <td><?php echo $GameName?></td>
+      <td>##</td>
+    </tr>
+  </table>
+
+  <script>
+  function myFunction() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
   }
+  </script>
 }
-</script>
+  else {
+    echo $result;
+  }
 
 </body>
 </html>
