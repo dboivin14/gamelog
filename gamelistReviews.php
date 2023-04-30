@@ -28,7 +28,7 @@ if (gettype($result) == "object") {
             Date Created: <?php echo $row['Date'] ?>
           </p>
         </div>
-      </div>
+      
       
       <?php
       if ($colCount%2 == 0) {
@@ -37,6 +37,9 @@ if (gettype($result) == "object") {
       
     }
     $result= '</div>';
+    ?>
+    </div>
+    <?php
   }
 } else {
   echo $result;
