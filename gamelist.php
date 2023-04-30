@@ -68,7 +68,7 @@ $colCount =+ 1;
       <td><?php echo $row['gamename']."<br />\n"?></td>
       <td><?php echo $row['GameID']."<br />\n"?></td>
     </tr>
-  </table>
+  
 
   
 <?php
@@ -77,6 +77,7 @@ $colCount =+ 1;
 //}
 
  ?>
+ </table>
   <script>
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
