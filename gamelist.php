@@ -58,13 +58,13 @@ $result->execute();
 
 
 while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){
-  //$GameName = $row['GameName'];
+  $GameName = $row['GameName'];
 
 
 //foreach($db as $row){
   ?>
     <tr>
-      <td><?php echo $row['$GameName']."<br />\n"?></td>
+      <td><?php echo $GameName."<br />\n"?></td>
       <td>##</td>
     </tr>
   </table>
