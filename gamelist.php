@@ -55,17 +55,17 @@ $sql = "SELECT GameName FROM games";
 
 $query = $db->prepare($sql);
 $query->execute();
+$result = $query->fetchall();
 
-
-while ($result = $query->fetchall()){
-  $GameName = $query['GameName'];
+while ($row = $result){
+  $GameName = $row['GameName'];
 
     ?>
 <?php
-foreach($db as $result){
+foreach($db as $row){
   ?>
     <tr>
-      <td><?php echo $result['$GameName']."<br />\n"?></td>
+      <td><?php echo $row['$GameName']."<br />\n"?></td>
       <td>##</td>
     </tr>
   </table>
@@ -73,7 +73,7 @@ foreach($db as $result){
   
 <?php
 }
-
+$current = $row;
 }
 
  ?>
