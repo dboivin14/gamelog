@@ -53,11 +53,11 @@
 <?php 
 $sql = "SELECT GameName FROM games";
 
-$query = $db->prepare($sql);
-$query->execute();
-$result = $query->fetchall();
+$result = $db->prepare($sql);
+$result->execute();
 
-while ($row = $result){
+
+while ($row = $result->fetchAll(PDO::FETCH_ASSOC)){
   $GameName = $row['GameName'];
 
     ?>
