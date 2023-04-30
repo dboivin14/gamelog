@@ -53,17 +53,20 @@ $result = $db->prepare($sql);
 $result->execute([$id]);
 $colCount = 0;
 if ($result->rowCount() > 0) {
+  ?>
+  <table id="myTable">
+    <tr COLSPAN=1 BGCOLOR="#6D8FFF">
+      <th style="width:60%;">Game</th>
+      <th style="width:40%;">Rating</th>
+    </tr>
+ <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
   //$gamename = $row['gamename'];
 //print_r($row);
 $colCount =+ 1;
 //foreach($db as $row){
   ?>
-    <table id="myTable">
-    <tr COLSPAN=1 BGCOLOR="#6D8FFF">
-      <th style="width:60%;">Game</th>
-      <th style="width:40%;">Rating</th>
-    </tr>
+    
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
       <td><?php echo $row['GameID']."<br />\n"?></td>
