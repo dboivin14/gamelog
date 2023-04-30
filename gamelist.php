@@ -47,7 +47,7 @@
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
 
 <?php 
-$sql = "SELECT GameID, gamename FROM games";
+$sql = "SELECT * FROM games LEFT JOIN rating, reviews.GameID FROM reviews ON reviews.GameID = games.GameID";
 //$id = 16;
 $result = $db->prepare($sql);
 $result->execute();
@@ -69,7 +69,7 @@ $colCount =+ 1;
     
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
-      <td><?php echo $row['GameID']."<br />\n"?></td>
+      <td><?php echo $row['rating']."<br />\n"?></td>
     </tr>
   
 
