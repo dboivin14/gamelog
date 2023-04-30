@@ -40,13 +40,13 @@ $colCount = 0;
       if ($colCount%2 == 0) {
         echo '</div><div class="row">';
       }
-      print_r($row);
+      
     }
     echo '</div>';
 //  }
 //} else {
-  $result;
- 
+//  $result;
+  print_r($row);
 //}
 //echo json_encode($result);
 
