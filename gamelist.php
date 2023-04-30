@@ -45,11 +45,7 @@
 
 <h2>All Games</h2>
   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
-  <table id="myTable">
-    <tr class="header">
-      <th style="width:60%;">Game</th>
-      <th style="width:40%;">Rating</th>
-    </tr>
+
 <?php 
 $sql = "SELECT GameID, gamename FROM games LIMIT 2";
 $id = 16;
@@ -63,6 +59,11 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
 $colCount =+ 1;
 //foreach($db as $row){
   ?>
+    <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Game</th>
+      <th style="width:40%;">Rating</th>
+    </tr>
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
       <td><?php echo $row['GameID']."<br />\n"?></td>
