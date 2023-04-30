@@ -1,7 +1,7 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-$sql = "SELECT * reviews LEFT JOIN games ON reviews.GameID = games.GameID";
+$sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
   
   
   
@@ -15,7 +15,8 @@ if (gettype($result) == "object") {
     //$result= '<div class="row">';
 ?>    
   
-<?php              
+<?php
+
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       print_r("1");
       $colCount += 1;
@@ -64,7 +65,7 @@ if (gettype($result) == "object") {
 //}
 
 
-//print_r($db->errorInfo());
+print_r($db->errorInfo());
 ?>
 
 </body>
