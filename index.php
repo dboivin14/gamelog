@@ -43,7 +43,7 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
   </head>
 <body>
   <ul class="topnav">
-  <li><a class="active" href="index_old.html">Home</a></li>
+  <li><a class="active" href="index.php">Home</a></li>
   <li><a href="gamelist.php">Games</a></li>
   <li><a href="gamelistReviews.php">Reviews</a></li>
   <li class="right"><a href="#account">Account</a></li>
