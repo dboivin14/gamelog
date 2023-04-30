@@ -12,10 +12,10 @@ $sql = $db->prepare('
    ');
   //$result= $db->query($sql)->fetch();
 $colCount = 0;
-if (gettype($result) == "object") {
-  if ($result->num_rows > 0) {
+if (gettype($sql) == "object") {
+  if ($sql->num_rows > 0) {
     echo '<div class="row">';
-    while ($row = $result->fetch_assoc()) {
+    while ($row = $sql->fetch_assoc()) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
@@ -43,8 +43,8 @@ if (gettype($result) == "object") {
     echo '</div>';
   }
 } else {
-  $result;
+  $sql;
  
 }
-echo json_encode($result);
+echo json_encode($sql);
 ?>
