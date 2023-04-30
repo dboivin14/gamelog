@@ -15,6 +15,16 @@ if (gettype($result) == "object") {
 ?>    
   <div class="card-group">    
     <div class="card">
+      <div class="card-body">
+          <h4 class="card-title">GAMEID</h4>
+          <p class="card-text">
+            Game Name: Name<br>
+            Rating: Rating<br>
+            User: ID#<br>
+            Review: ReviewText<br>
+            Date Created: 5/1/23
+          </p>
+        </div>
 <?php              
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       $colCount += 1;
