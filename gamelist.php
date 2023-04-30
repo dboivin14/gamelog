@@ -73,11 +73,13 @@ $colCount =+ 1;
   
 <?php
 }
+ ?>
+</table>
+<?php
 }
 //}
-
  ?>
- </table>
+ 
   <script>
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
