@@ -49,7 +49,10 @@ if (gettype($result) == "object") {
   echo $result;
   
 }
-
+print_r($result);
 //echo json_encode($result);
 
 ?>
+
+</body>
+</html>
