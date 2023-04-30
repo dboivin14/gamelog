@@ -10,12 +10,12 @@ $sql = $db->prepare('
    UNION
    (SELECT GameID, GameName FROM games where GameID = :gameID ORDER BY gameID DESC)
    ');
-  $result= $db->query($sql)->fetch();
+  $result= $db->query($sql);
 $colCount = 0;
 if (gettype($sql) == "object") {
   if ($sql->num_rows > 0) {
     echo '<div class="row">';
-    while ($row = $sql->fetch_assoc()) {
+    while ($row = $sql->fetch(PDO::FETCH_NUM)) {
       $colCount += 1;
       $GameName = $row['GameName'];
       $UserID = $row['UserID'];
@@ -47,4 +47,5 @@ if (gettype($sql) == "object") {
  
 }
 echo json_encode($sql);
+
 ?>
