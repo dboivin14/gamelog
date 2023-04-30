@@ -7,8 +7,8 @@ $db = new PDO('mysql:host=localhost; dbname=gamelogapp;charset=utf8', $sqluser, 
   //UNION ('SELECT GameID, GameName FROM games ORDER BY GameID');
 $sql = "SELECT reviews.GameID, rating, UserID, reviewtext, Date FROM reviews LEFT JOIN games ON reviews.GameID = games.GameID WHERE (games.GameID) is null";
   
-  $result= $db->prepare($sql);
-  $result-> execute();
+  $result= $db->query($sql);
+  //$result-> execute();
   echo ($result->rowCount());
 $colCount = 0;
 if (gettype($result) == "object") {
