@@ -19,15 +19,17 @@ $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
 
 $stmt= $db->prepare($sql);
 
-mysqli_stmt_bind_param($stmt, "sssss",
-					   $username,
-					   $email,
-					   $firstname,
-					   $lastname,
-					   $password,
-					   $dob);
+$stmt->execute();
 
-mysqli_stmt_execute($stmt);
+//mysqli_stmt_bind_param($stmt, "sssss",
+//					   $username,
+//					   $email,
+//					   $firstname,
+//					   $lastname,
+//					   $password,
+//					   $dob);
+
+//mysqli_stmt_execute($stmt);
 
 
 
