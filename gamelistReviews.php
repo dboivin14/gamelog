@@ -6,7 +6,7 @@ $result->execute();
 //$rows = $result->fetchAll();
 //foreach ($rows as $games){
 if($result->rowCount()>0){
-  while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+
   //echo $row[gamename];
     ?>
   
@@ -14,19 +14,12 @@ if($result->rowCount()>0){
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMEID</h4>
-            <p class="card-text">
-              Game Name: Name<br>
-              Rating: Rating<br>
-              User: ID#<br>
-              Review: ReviewText<br>
-              Date Created: 5/1/23
-            </p>
           </div>
-      </div>
+      </div>  
+      <?php
+      while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+      ?>
       <div class="card">  
-        <?php
-          print_r("Test");
-        ?>
           <div class="card-body">
             <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
             <p class="card-text">
@@ -40,12 +33,14 @@ if($result->rowCount()>0){
 
 
         </div>
-      </div>
-  <?php 
- 
-  }
+      
+<?php 
 }
- ?>  
+?>
+ </div>
+<?php 
+}
+?>  
 
 
 </body>
