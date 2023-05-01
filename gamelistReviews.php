@@ -51,11 +51,6 @@ if($result->rowCount()>0){
       </div>
 
         </div>
-      
-<?php 
-}
-?>
-        <!--Modal-->
   <div class='modal' id='myModal'>
     <div class='modal-dialog'>
       <div class='modal-content'>
@@ -81,7 +76,12 @@ if($result->rowCount()>0){
       
       </div>
     </div>
-  </div>
+  </div>    
+<?php 
+}
+?>
+        <!--Modal-->
+  
  </div>
 <?php 
 }
