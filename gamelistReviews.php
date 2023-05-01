@@ -26,7 +26,7 @@ if($result->rowCount()>0){
     <div class='card-deck'>
       <div class='card'>
         <div class="card-header">
-            <h4 class="card-title">GAMEID</h4>
+            <h4 class="card-title">GAMES:</h4>
           </div>
       </div>  
       <?php
@@ -34,9 +34,9 @@ if($result->rowCount()>0){
       ?>
       <div class="card">  
           <div class="card-body">
-            <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
+            <h4 class="card-title"><?php echo $row['gamename'] ?></h4>
             <p class="card-text">
-              Game Name: <?php echo $row['gamename'] ?><br>
+              Steam ID: <?php echo $row['GameID'] ?><br>
               Rating: <?php echo $row['rating'] ?><br>
               User: <?php echo $row['ReviewID'] ?><br>
               Review: <?php echo $row['reviewtext'] ?><br>
