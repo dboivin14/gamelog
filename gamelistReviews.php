@@ -1,4 +1,18 @@
-<?php include 'index.php';
+<?php include 'index.php';?>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+#card-deck {
+  .card{
+    flex-basis: 50%;
+  }
+}
+
+</style>
+</head>
 
 $sql = "SELECT * FROM reviews LEFT JOIN games ON games.GameID = reviews.GameID";
 $result= $db->prepare($sql);
