@@ -24,8 +24,10 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
     </div>
     <div class="card">  
         <div class="card-body">
+          <?php
             $result= $db->prepare($sql);
             $result->execute();
+          ?>  
         </div>
       </div>
 <?php
