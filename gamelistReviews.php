@@ -5,7 +5,7 @@ $result= $db->prepare($sql);
 $result->execute();
 //$rows = $result->fetchAll();
 //foreach ($rows as $games){
-if($result->num_rows>0){
+if($result->rowCount()>0){
   while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
   //echo $row[gamename];
     ?>
