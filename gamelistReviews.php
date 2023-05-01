@@ -40,6 +40,7 @@ if($result->rowCount()>0){
  </div>
 <?php 
 }
+echo $result;
 ?>  
 
 
