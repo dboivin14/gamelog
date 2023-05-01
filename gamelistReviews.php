@@ -27,12 +27,14 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
           <?php
             $result= $db->prepare($sql);
             $result->execute();
+            $rows = $result->fetchAll();
+            foreach ($rows as $games){
           ?>  
         </div>
       </div>
 <?php
     
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       print_r("Test");
       //$colCount += 1;
       ?>
