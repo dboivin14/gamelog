@@ -23,7 +23,7 @@
 #myTable {
   border-collapse: collapse;
   width: 70%;
-  border: 1px solid #ddd;
+  border: 4px solid #ddd;
   font-size: 18px;
 }
 
@@ -57,7 +57,7 @@ $result->execute();
 $colCount = 0;
 if ($result->rowCount() > 0) {
   ?>
-  <table id="myTable">
+  <table id="myTable" class="center">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
       <th style="width:30%;">Rating</th>
