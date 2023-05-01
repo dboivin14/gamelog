@@ -9,7 +9,7 @@ if($result->rowCount()>0){
   //echo $row[gamename];
     ?>
   
-    <div class='card-group'>
+    <div class='card-deck'>
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMEID</h4>
