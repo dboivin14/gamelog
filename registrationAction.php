@@ -17,7 +17,7 @@ $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
 		VALUES (?,?,?,?,?,?)";
 //$stmt = mysqli_stmt_init($conn);
 
-$stmt= $db->prepare($sql);
+$stmt= $pdo->prepare($sql);
 
 $stmt->execute([$username, $email, $firstname, $lastname, $password, $dob]);
 
