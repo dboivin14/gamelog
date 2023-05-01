@@ -4,14 +4,14 @@
   <p>Please complete and submit the form.</p>
   <form name="registration" action="registrationAction.php" class="was-validated">
       <div class="mb-3">
-        <label for="fname" class="form-label">First Name:</label>
-        <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required>
+        <label for="firstname" class="form-label">First Name:</label>
+        <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
       <div class="mb-3">
-        <label for="lname" class="form-label">Last name:</label>
-        <input type="text" class="form-control" id="lname" placeholder="Enter your lastname" name="lname" required>
+        <label for="lastname" class="form-label">Last name:</label>
+        <input type="text" class="form-control" id="lastname" placeholder="Enter your lastname" name="lastname" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
@@ -34,14 +34,14 @@
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
       <div class="mb-3">
-        <label for="pwd" class="form-label">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
       <div class="mb-3">
-        <label for="pwd" class="form-label"> Confirm Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Confirm password" name="pwd" required>
+        <label for="password" class="form-label"> Confirm Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Confirm password" name="password" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       <button type="submit" class="btn btn-primary">Submit</button>
