@@ -3,22 +3,15 @@
 
 $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
   
-  
-  
-  //$count = $db->query("SELECT count(*) FROM reviews")->fetchColumn();
-  //echo $count;
-  $result= $db->prepare($sql);
-  $result->execute();
-$colCount = 0;
-if (gettype($result) == "object") {
-//  if ($result->rowCount() > 0) {
-    //$result= '<div class="row">';
+
+
+//if (gettype($result) == "object") {
 ?>
 <div class="container">
   <div class="row">
     <div class="card-group">    
     <div class="card">
-      <div class="card-body">
+      <div class="card-header">
           <h4 class="card-title">GAMEID</h4>
           <p class="card-text">
             Game Name: Name<br>
@@ -29,8 +22,14 @@ if (gettype($result) == "object") {
           </p>
         </div>
     </div>
+    <div class="card">  
+        <div class="card-body">
+            $result= $db->prepare($sql);
+            $result->execute();
+        </div>
+      </div>
 <?php
-
+    
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       print_r("Test");
       //$colCount += 1;
@@ -56,7 +55,7 @@ if (gettype($result) == "object") {
   
 
     <?php
-  }
+ // }
 //print_r($db->errorInfo());
 ?>
 
