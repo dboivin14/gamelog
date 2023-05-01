@@ -11,7 +11,7 @@ $dob = $_GET["dob"];
 //include("sqlpassword.php"); //Note from Spencer, needs to use this file here
 //$db = new PDO('mysql:host=localhost;dbname=enter database name here;charset=utf8', $id, $password);
 //$stmt = mysqli_stmt_init($conn);
-$sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
+$sql = "INSERT INTO users (UserID, steamID, username, email, firstname, lastname, password, dob, profilepic, isAdmin)
 		VALUES (0,0,?,?,?,?,?,?,0,0)";
 
 $stmt= $db->prepare($sql);
