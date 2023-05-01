@@ -61,11 +61,11 @@ if($result->rowCount()>0){
 ?>  
   <script>
   function myFunction() {
-    var input, filter, col, h4, p, i, txtValue;
+    var input, filter, row, h4, p, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    col = document.getElementById("col");
-    h4 = col.getElementsByTagName("h4");
+    row = document.getElementById("row");
+    h4 = row.getElementsByTagName("h4");
     for (i = 0; i < h4.length; i++) {
       p = h4[i].getElementsByTagName("p")[0];
       if (p) {
