@@ -30,8 +30,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
             $rows = $result->fetchAll();
             foreach ($rows as $games){
           ?>  
-        //</div>
-      //</div>
+
 <?php
     
     //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
