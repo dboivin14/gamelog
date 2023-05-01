@@ -78,7 +78,16 @@ $colCount =+ 1;
     </button>
     </tr>
   
-  <!--Modal-->
+  
+<?php
+}
+ ?>
+</table>
+<?php
+}
+//}
+ ?>
+   <!--Modal-->
   <div class='modal' id='myModal'>
     <div class='modal-dialog'>
       <div class='modal-content'>
@@ -91,7 +100,7 @@ $colCount =+ 1;
 
         <!-- Modal body -->
         <div class="modal-body">
-          The game's current rating: <?php echo $row['rating']?> / 5
+          The game's current rating: <?php echo $row['rating']?> / 5 <br>
           Enter your own rating: X
         </div>
 
@@ -103,16 +112,7 @@ $colCount =+ 1;
       </div>
     </div>
   </div>
-  
-<?php
-}
- ?>
-</table>
-<?php
-}
-//}
- ?>
- 
+
   <script>
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
