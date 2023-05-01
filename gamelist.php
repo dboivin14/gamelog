@@ -89,7 +89,7 @@ $colCount =+ 1;
         <!-- Modal body -->
         <div class="modal-body">
           The game's current rating: <?php echo $row['rating']?> / 5 <br>
-          Enter your own rating: X
+            <input type="text" id="myRating" onkeyup="changerating()" placeholder="Enter new Rating" title="Type in a Rating">
         </div>
 
         <!-- Modal footer -->
@@ -107,7 +107,7 @@ $colCount =+ 1;
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <script type="text/javascript">
-            $(function () {
+            $(function changerating() {
                 var pregname; 
                 var prerating; 
                 $('table tbody tr td').on('click', function () {
