@@ -17,7 +17,7 @@ $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
 		VALUES (0,0?,?,?,?,?,?)";
 
 $stmt= $db->prepare($sql);
-$stmt->execute($data);
+$stmt->execute();
 
 //$db->prepare($sql)->execute([$username, $email, $firstname, $lastname, $password, $dob]);
 
