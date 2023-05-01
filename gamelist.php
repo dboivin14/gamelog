@@ -102,29 +102,7 @@ $colCount =+ 1;
     </div>
   </div>
   
-          <script src="~/scripts/jquery.js"></script>
-
-
-        <script type="text/javascript">
-            $(function () {
-                var prefname; // fname textbox
-                var prelname; //lname textbox
-                $('table tbody tr td').on('click', function () {
-                    event.preventDefault();
-                    prefname = $(this).closest('tr').find(":text:eq(0)");
-                    prelname = $(this).closest('tr').find(":text:eq(1)");
-                    $("#txtfname").val($(prefname).val());
-                    $("#txtlname").val($(prelname).val());
-                    $("#myModal").modal("show");
-                });
-                //save change button click evnet
-                $("#btnsubmit").click(function () {
-                    $(prefname).val($("#txtfname").val());
-                    $(prelname).val($("#txtlname").val());
-                    $("#myModal").modal("hide");
-                })
-            });
-        </script>
+  
   
 <?php
 }
