@@ -1,4 +1,4 @@
-<?php include 'index.php'; 
+<?php
 
 $firstname = $_POST ["firstname"];
 $lastname = $_POST ["lastname"];
@@ -11,8 +11,8 @@ var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
 
 require __DIR__ . "DBCONNECT.php";
-//include("sqlpassword.php"); //Note from Spencer, needs to use this file here
-//$db = new PDO('mysql:host=localhost;dbname=enter database name here;charset=utf8', $id, $password);
+include("sqlpassword.php"); //Note from Spencer, needs to use this file here
+$db = new PDO('mysql:host=localhost;dbname=enter database name here;charset=utf8', $id, $password);
 
 $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
 		VALUES (?,?,?,?,?,?)";
