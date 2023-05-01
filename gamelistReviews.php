@@ -5,9 +5,9 @@
 * {
   box-sizing: border-box;
 }
-#card-deck {
-  .card{
-    flex-basis: 200px;
+#card-columns {
+  @include media-breakpoint-only(lg){
+    column-cound:3;
   }
 }
 
@@ -23,7 +23,7 @@ if($result->rowCount()>0){
   //echo $row[gamename];
     ?>
   
-    <div class='card-deck'>
+    <div class='card-columns'>
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMES:</h4>
