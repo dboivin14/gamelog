@@ -1,14 +1,12 @@
 <?php include 'index.php';
 
-
-  
 $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
             $result= $db->prepare($sql);
             $result->execute();
             $rows = $result->fetchAll();
             foreach ($rows as $games){
     //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-//if (gettype($result) == "object") {
+echo $row[gamename];
 ?>
 <div class="container">
   <div class="row">
@@ -26,11 +24,8 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
         </div>
     </div>
     <div class="card">  
-  <?php
-    
-
-      print_r("Test");
-      //$colCount += 1;
+      <?php
+        print_r("Test");
       ?>
         <div class="card-body">
           <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
