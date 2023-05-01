@@ -12,7 +12,7 @@ $dob = $_GET["dob"];
 //$db = new PDO('mysql:host=localhost;dbname=enter database name here;charset=utf8', $id, $password);
 //$stmt = mysqli_stmt_init($conn);
 $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
-		VALUES (0,0,?,?,?,?,?,?)";
+		VALUES (0,0,?,?,?,?,?,?,0,0)";
 
 $stmt= $db->prepare($sql);
 $stmt->execute([$username, $email, $firstname, $lastname, $password, $dob]);
