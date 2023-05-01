@@ -16,7 +16,7 @@
 $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
 		VALUES (0,0?,?,?,?,?,?)";
 
-$stmt= $pdo->prepare($sql);
+$stmt= $db->prepare($sql);
 $stmt->execute($data);
 
 //$db->prepare($sql)->execute([$username, $email, $firstname, $lastname, $password, $dob]);
