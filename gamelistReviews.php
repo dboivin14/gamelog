@@ -6,9 +6,9 @@
 $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
             $result= $db->prepare($sql);
             $result->execute();
-            //$rows = $result->fetchAll();
-            //foreach ($rows as $games){
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $rows = $result->fetchAll();
+            foreach ($rows as $games){
+    //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 //if (gettype($result) == "object") {
 ?>
 <div class="container">
