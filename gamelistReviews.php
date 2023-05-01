@@ -28,6 +28,7 @@ if($result->rowCount()>0){
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMES:</h4>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game">
           </div>
       </div>
       </div>
@@ -56,9 +57,28 @@ if($result->rowCount()>0){
  </div>
 <?php 
 }
-echo $result;
-?>  
 
+?>  
+  <script>
+  function myFunction() {
+    var input, filter, col, h4, p, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    col = document.getElementById("col");
+    h4 = col.getElementsByTagName("h4");
+    for (i = 0; i < h4.length; i++) {
+      p = h4[i].getElementsByTagName("p")[0];
+      if (p) {
+        txtValue = p.textContent || p.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          h4[i].style.display = "";
+        } else {
+          h4[i].style.display = "none";
+        }
+      }       
+    }
+  }
+  </script>
 
 </body>
 </html>
