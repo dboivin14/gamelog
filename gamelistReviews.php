@@ -9,7 +9,7 @@ if($result->rowCount()>0){
   while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
   //echo $row[gamename];
     ?>
-  }
+  
     <div class='card-group'>
       <div class='card'>
         <div class="card-header">
