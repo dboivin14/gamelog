@@ -16,13 +16,6 @@ if (gettype($result) == "object") {
 ?>    
   <div class="card-group">    
     <div class="card">
-      
-<?php
-
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-      print_r("Test");
-      //$colCount += 1;
-      ?>
       <div class="card-body">
           <h4 class="card-title">GAMEID</h4>
           <p class="card-text">
@@ -33,6 +26,14 @@ if (gettype($result) == "object") {
             Date Created: 5/1/23
           </p>
         </div>
+    </div>
+<?php
+
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+      print_r("Test");
+      //$colCount += 1;
+      ?>
+      <div class="card">  
         <div class="card-body">
           <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
           <p class="card-text">
@@ -43,6 +44,7 @@ if (gettype($result) == "object") {
             Date Created: <?php echo $row['Date'] ?>
           </p>
         </div>
+      </div>
       <?php 
     }
     ?>
