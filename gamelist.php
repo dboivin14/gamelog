@@ -57,7 +57,7 @@ $result->execute();
 $colCount = 0;
 if ($result->rowCount() > 0) {
   ?>
-  <table id="myTable">
+  <table id="myTable" class="center">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
       <th style="width:30%;">Rating</th>
@@ -89,7 +89,7 @@ $colCount =+ 1;
         <!-- Modal body -->
         <div class="modal-body">
           The game's current rating: <?php echo $row['rating']?> / 5 <br>
-            <input type="int" id="myRating" onkeyup="changerating()" placeholder="Enter new Rating" title="Type in a Rating">
+          Enter your own rating: X
         </div>
 
         <!-- Modal footer -->
@@ -102,11 +102,7 @@ $colCount =+ 1;
     </div>
   </div>
   
-          <script src="~/scripts/jquery.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-        
+  
   
 <?php
 }
@@ -115,26 +111,7 @@ $colCount =+ 1;
 <?php
 }
  ?>
-          <script type="text/javascript">
-            $(function changerating() {
-                var pregname; 
-                var prerating; 
-                $('table tbody tr td').on('click', function () {
-                    event.preventDefault();
-                    pregname = $(this).closest('tr').find(":text:eq(0)");
-                    prerating = $(this).closest('tr').find(":text:eq(1)");
-                    $("#txtgname").val($(pregname).val());
-                    $("#txtrating").val($(prerating).val());
-                    $("#myModal").modal("show");
-                });
-                //save change button click evnet
-                $("#btnsubmit").click(function () {
-                    $(pregname).val($("#txtgname").val());
-                    $(prerating).val($("#txtrating").val());
-                    $("#myModal").modal("hide");
-                })
-            });
-        </script>
+ 
   <script>
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
