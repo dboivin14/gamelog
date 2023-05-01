@@ -28,7 +28,7 @@
 }
 
 #myTable th, #myTable td {
-  text-align: left;
+  text-align: center;
   padding: 12px;
 }
 
@@ -65,18 +65,14 @@ if ($result->rowCount() > 0) {
     </tr>
  <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
-  //$gamename = $row['gamename'];
-//print_r($row);
 $colCount =+ 1;
-//foreach($db as $row){
   ?>
     
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
       <td><?php echo $row['rating']."<br />\n"?></td>
-      <td><button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal'>
-      Rate Game
-        </button></td>
+      <td><button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal'>Rate Game</button></td>
+      
     </tr>
   
   <!--Modal-->
@@ -99,11 +95,37 @@ $colCount =+ 1;
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="btnsubmit" class="btn btn-primary"> Save Changes </button>
         </div>
       
       </div>
     </div>
   </div>
+  
+          <script src="~/scripts/jquery.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                var pregname; 
+                var prerating; 
+                $('table tbody tr td').on('click', function () {
+                    event.preventDefault();
+                    pregname = $(this).closest('tr').find(":text:eq(0)");
+                    prerating = $(this).closest('tr').find(":text:eq(1)");
+                    $("#txtgname").val($(pregname).val());
+                    $("#txtrating").val($(prerating).val());
+                    $("#myModal").modal("show");
+                });
+                //save change button click evnet
+                $("#btnsubmit").click(function () {
+                    $(pregname).val($("#txtgname").val());
+                    $(prerating).val($("#txtrating").val());
+                    $("#myModal").modal("hide");
+                })
+            });
+        </script>
   
 <?php
 }
@@ -111,7 +133,6 @@ $colCount =+ 1;
 </table>
 <?php
 }
-//}
  ?>
  
   <script>
