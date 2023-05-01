@@ -13,18 +13,10 @@
 //include("sqlpassword.php"); //Note from Spencer, needs to use this file here
 //$db = new PDO('mysql:host=localhost;dbname=enter database name here;charset=utf8', $id, $password);
 //$stmt = mysqli_stmt_init($conn);
-//$sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
-		//VALUES (?,?,?,?,?,?)";
-$data = [
-    'username' => $username,
-    'email' => $email,
-    'firstname' => $firstname,
-    'lastname' => $lastname,
-    'password' => $password,
-    'dob' => $dob
-];
-$sql = "INSERT INTO users (0,0, username, email, firstname, lastname, password, dob) VALUES (:username, :email, :firstname, :lastname, :password, :dob)";
-$stmt= $db->prepare($sql);
+$sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
+		VALUES (0,0?,?,?,?,?,?)";
+
+$stmt= $pdo->prepare($sql);
 $stmt->execute($data);
 
 //$db->prepare($sql)->execute([$username, $email, $firstname, $lastname, $password, $dob]);
