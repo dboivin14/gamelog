@@ -38,8 +38,6 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
       print_r("Test");
       //$colCount += 1;
       ?>
-      <div class="card">  
-        <div class="card-body">
           <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
           <p class="card-text">
             Game Name: <?php echo $row['gamename'] ?><br>
