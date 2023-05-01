@@ -57,7 +57,7 @@ $result->execute();
 $colCount = 0;
 if ($result->rowCount() > 0) {
   ?>
-  <table id="myTable" class="center">
+  <table id="myTable">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
       <th style="width:30%;">Rating</th>
@@ -89,7 +89,7 @@ $colCount =+ 1;
         <!-- Modal body -->
         <div class="modal-body">
           The game's current rating: <?php echo $row['rating']?> / 5 <br>
-            <input type="text" id="myRating" onkeyup="changerating()" placeholder="Enter new Rating" title="Type in a Rating">
+            <input type="int" id="myRating" onkeyup="changerating()" placeholder="Enter new Rating" title="Type in a Rating">
         </div>
 
         <!-- Modal footer -->
