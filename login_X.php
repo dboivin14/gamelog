@@ -71,7 +71,7 @@ span.psw {
   <body>
     <h2>Login Form</h2>
 
-    <form action="/index.html" method="post">
+    <form action="/index.php" method="post">
      <div class="container">
         <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
