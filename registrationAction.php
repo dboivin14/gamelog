@@ -1,11 +1,11 @@
 <?php include 'index.php';
 
-$firstname = $stmt["firstname"];
-$lastname = $stmt["lastname"];
-$dob = $stmt["dob"];
-$email = $stmt["email"];
-$username = $stmt["username"];
-$password = $stmt["password"];
+//$firstname = $stmt["firstname"];
+//$lastname = $stmt["lastname"];
+//$dob = $stmt["dob"];
+//$email = $stmt["email"];
+//$username = $stmt["username"];
+//$password = $stmt["password"];
 
 //var_dump($firstname, $lastname, $dob, $email, $username, $password);
 
