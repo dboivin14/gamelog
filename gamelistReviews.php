@@ -5,9 +5,9 @@
 * {
   box-sizing: border-box;
 }
-#card-columns {
-  @include media-breakpoint-only(lg){
-    column-cound:3;
+#card-deck {
+  .card{
+    flex-basis: 200px;
   }
 }
 
@@ -23,15 +23,18 @@ if($result->rowCount()>0){
   //echo $row[gamename];
     ?>
   
-    <div class='card-columns'>
+    <div class='row row-cols-3 g-3'>
+      <div class ='col'>
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMES:</h4>
           </div>
-      </div>  
+      </div>
+      </div>
       <?php
       while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       ?>
+      <div class ='col'>
       <div class="card">  
           <div class="card-body">
             <h4 class="card-title"><?php echo $row['gamename'] ?></h4>
@@ -43,7 +46,7 @@ if($result->rowCount()>0){
               Date Created: <?php echo $row['Date'] ?>
             </p>
           </div>
-
+      </div>
 
         </div>
       
