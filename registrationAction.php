@@ -20,8 +20,8 @@ $data = [
     'email' => $email,
     'firstname' => $firstname,
     'lastname' => $lastname,
-     'password' => $password,
-     'dob' => $dob
+    'password' => $password,
+    'dob' => $dob
 ];
 $sql = "INSERT INTO users (username, email, firstname, lastname, password, dob) VALUES (:username, :email, :firstname, :lastname, :password, :dob)";
 $stmt= $db->prepare($sql);
