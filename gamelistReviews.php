@@ -8,7 +8,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
             $result->execute();
             //$rows = $result->fetchAll();
             //foreach ($rows as $games){
-
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 //if (gettype($result) == "object") {
 ?>
 <div class="container">
@@ -29,7 +29,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
     <div class="card">  
   <?php
     
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+
       print_r("Test");
       //$colCount += 1;
       ?>
