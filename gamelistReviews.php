@@ -7,7 +7,7 @@
 }
 #card-deck {
   .card{
-    flex-basis: 50%;
+    flex-basis: 150%;
   }
 }
 
