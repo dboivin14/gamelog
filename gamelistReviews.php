@@ -1,7 +1,7 @@
 <?php include 'index.php'; if (isset($_GET['msg']))
   echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 
-$sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
+
   
 
 
@@ -23,8 +23,9 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
         </div>
     </div>
     <div class="card">  
-        <div class="card-body">
+        
           <?php
+            $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
             $result= $db->prepare($sql);
             $result->execute();
             $rows = $result->fetchAll();
@@ -37,6 +38,7 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
       print_r("Test");
       //$colCount += 1;
       ?>
+        <div class="card-body">
           <h4 class="card-title"><?php echo $row['GameID'] ?></h4>
           <p class="card-text">
             Game Name: <?php echo $row['gamename'] ?><br>
@@ -46,10 +48,11 @@ $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
             Date Created: <?php echo $row['Date'] ?>
           </p>
         </div>
-      </div>
+      
       <?php 
-    }
-    ?>
+      }
+      ?>
+      </div>
     </div>
   </div>
 </div>
