@@ -1,12 +1,11 @@
 <?php include 'index.php';
 
-$sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
+$sql = "SELECT * FROM reviews LEFT JOIN games ON games.GameID = reviews.GameID";
 $result= $db->prepare($sql);
 $result->execute();
 //$rows = $result->fetchAll();
 //foreach ($rows as $games){
 if($result->rowCount()>0){
-
   //echo $row[gamename];
     ?>
   
