@@ -58,9 +58,10 @@ $colCount = 0;
 if ($result->rowCount() > 0) {
   ?>
   <table id="myTable">
-    <tr COLSPAN=1 BGCOLOR="#6D8FFF">
+    <tr COLSPAN=2 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
-      <th style="width:40%;">Rating</th>
+      <th style="width:30%;">Rating</th>
+      <th style="width:10%">Rate</th>
     </tr>
  <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
@@ -78,16 +79,7 @@ $colCount =+ 1;
     </button>
     </tr>
   
-  
-<?php
-}
- ?>
-</table>
-<?php
-}
-//}
- ?>
-   <!--Modal-->
+  <!--Modal-->
   <div class='modal' id='myModal'>
     <div class='modal-dialog'>
       <div class='modal-content'>
@@ -112,7 +104,16 @@ $colCount =+ 1;
       </div>
     </div>
   </div>
-
+  
+<?php
+}
+ ?>
+</table>
+<?php
+}
+//}
+ ?>
+ 
   <script>
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
