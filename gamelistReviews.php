@@ -13,8 +13,10 @@ $colCount = 0;
 if (gettype($result) == "object") {
 //  if ($result->rowCount() > 0) {
     //$result= '<div class="row">';
-?>    
-  <div class="card-group">    
+?>
+<div class="container">
+  <div class="row">
+    <div class="card-group">    
     <div class="card">
       <div class="card-body">
           <h4 class="card-title">GAMEID</h4>
@@ -50,6 +52,9 @@ if (gettype($result) == "object") {
     ?>
     </div>
   </div>
+</div>
+  
+
     <?php
   }
 //print_r($db->errorInfo());
