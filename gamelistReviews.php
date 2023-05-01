@@ -13,7 +13,7 @@
 
 </style>
 </head>
-
+<?php
 $sql = "SELECT * FROM reviews LEFT JOIN games ON games.GameID = reviews.GameID";
 $result= $db->prepare($sql);
 $result->execute();
