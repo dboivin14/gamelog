@@ -3,7 +3,11 @@
 
 
   
-
+$sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
+            $result= $db->prepare($sql);
+            $result->execute();
+            //$rows = $result->fetchAll();
+            //foreach ($rows as $games){
 
 //if (gettype($result) == "object") {
 ?>
@@ -23,18 +27,9 @@
         </div>
     </div>
     <div class="card">  
-        
-          <?php
-            $sql = "SELECT * reviews LEFT JOIN games ON games.GameID = reviews.GameID";
-            $result= $db->prepare($sql);
-            $result->execute();
-            $rows = $result->fetchAll();
-            foreach ($rows as $games){
-          ?>  
-
-<?php
+  <?php
     
-    //while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       print_r("Test");
       //$colCount += 1;
       ?>
@@ -49,19 +44,15 @@
           </p>
         </div>
       
-      <?php 
-      }
-      ?>
+      
       </div>
     </div>
   </div>
 </div>
-  
+<?php 
+      }
+ ?>  
 
-    <?php
- // }
-//print_r($db->errorInfo());
-?>
 
 </body>
 </html>
