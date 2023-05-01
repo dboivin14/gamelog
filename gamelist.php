@@ -22,7 +22,7 @@
 
 #myTable {
   border-collapse: collapse;
-  width: 100%;
+  width: 70%;
   border: 1px solid #ddd;
   font-size: 18px;
 }
