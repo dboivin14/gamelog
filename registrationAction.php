@@ -23,7 +23,7 @@ $data = [
     'password' => $password,
     'dob' => $dob
 ];
-$sql = "INSERT INTO users (username, email, firstname, lastname, password, dob) VALUES (:username, :email, :firstname, :lastname, :password, :dob)";
+$sql = "INSERT INTO users (0,0, username, email, firstname, lastname, password, dob) VALUES (:username, :email, :firstname, :lastname, :password, :dob)";
 $stmt= $db->prepare($sql);
 $stmt->execute($data);
 
