@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
        (password_verify($_POST["password"]))
     
-}
 ?>
 
 <head>
