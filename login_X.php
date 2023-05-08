@@ -8,9 +8,9 @@ if ($SERVER["REQUEST_METHOD"] === "POST") {
     
     $stmt= $db->prepare($sql);
     $stmt->execute([username]);
-    $result = $stmt->fetch_assoc()
+    $result = $stmt->fetch_assoc();
     
-    var_dump($result)
+    var_dump($result);
     exit
 }
 ?>
