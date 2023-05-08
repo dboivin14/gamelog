@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $stmt->fetch_assoc();
     
     if ($result) {
-        
-       (password_verify($_POST["password"]))
-    
+       password_verify($_POST["password"], $result("password")
+                       }
+            }
 ?>
 
 <head>
