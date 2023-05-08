@@ -12,7 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     if ($result) {
        password_verify($_POST["password"], $result("password"));
-        die("login successful");
                        }
             }
 ?>
