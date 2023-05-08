@@ -10,7 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt->execute([username]);
     $result = $stmt->fetch_assoc();
     
-    var_dump($result);
+    if ($result) {
+       if (password_verify($_POST["password"])) {
+           die("login successful");
+   
     exit;
 }
 ?>
