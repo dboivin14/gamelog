@@ -1,6 +1,6 @@
 <?php include 'index.php'; 
 
-if ($SERVER["REQUEST_METHOD"] === "POST") {
+if ($gamelogapp["REQUEST_METHOD"] === "POST") {
     
     $sql = sprintf("SELECT * FROM users
         WHERE username = '%s'",
