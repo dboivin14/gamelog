@@ -11,7 +11,7 @@ if ($SERVER["REQUEST_METHOD"] === "POST") {
     $result = $stmt->fetch_assoc();
     
     var_dump($result);
-    exit
+    exit;
 }
 ?>
 
