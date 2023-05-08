@@ -1,4 +1,18 @@
-<?php include 'index.php'; ?>
+<?php include 'index.php'; 
+
+if ($SERVER["REQUEST_METHOD"] === "POST") {
+    
+    $sql = sprintf("SELECT * FROM users
+        WHERE username = '%s'",
+        $_POST["usernmame"]);
+    
+    $result =  $stmt= $db->prepare($sql);
+    $stmt->execute([username]);
+    
+    var_dump(result->fetch_assoc());
+    exit
+}
+?>
 
 <head>
     <Title>Sign in to your account</Title>
