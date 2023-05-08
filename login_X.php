@@ -6,10 +6,11 @@ if ($SERVER["REQUEST_METHOD"] === "POST") {
         WHERE username = '%s'",
         $_POST["usernmame"]);
     
-    $result =  $stmt= $db->prepare($sql);
+    $stmt= $db->prepare($sql);
     $stmt->execute([username]);
+    $result = $stmt->fetch_assoc()
     
-    var_dump(result->fetch_assoc());
+    var_dump($result)
     exit
 }
 ?>
