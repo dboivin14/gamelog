@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $stmt->fetch_assoc();
     
     if ($result) {
-       if (password_verify($_POST["password"])) {
-           die("login successful");
+       (password_verify($_POST["password"])) {
+   exit;    
 }
 ?>
 
