@@ -57,7 +57,7 @@ if($result->rowCount()>0){
 ?>
         <!--Modal-->
        
-  <div class='modal fade' id='myModal<?php echo $row['GameID'] ?>' role='dialog'>
+  <div class='modal fade' id='myModal<?php echo $row['GameID'] ?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
@@ -87,11 +87,6 @@ if($result->rowCount()>0){
 
 ?>  
 <script>
-   $('.openBtn').on('click',function(){
-      $('.modal-body').load('getGameContent.php',function(){
-        $('#myModal').modal({show:true});
-      });
-    });
   function myFunction() {
     var input, filter, card, h4, p, i, txtValue;
     input = document.getElementById("myInput");
