@@ -57,7 +57,7 @@ if($result->rowCount()>0){
 ?>
         <!--Modal-->
        
-  <div class='modal' id='myModal' role='dialog'>
+  <div class='modal fade' id='myModal' role='dialog'>
     <div class='modal-dialog'>
       <div class='modal-content'>
         
