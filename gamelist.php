@@ -64,6 +64,12 @@ if ($result->rowCount() > 0) {
       <th style="width:30%;">Rating</th>
       <th style="width:10%">Rate</th>
     </tr>
+
+  
+  <!--Modal-->
+  <div class='modal' id='exampleModal' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class='modal-dialog'>
+      <div class='modal-content'>
  <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
 $colCount =+ 1;
@@ -74,13 +80,7 @@ $colCount =+ 1;
       <td><?php echo $row['rating']."<br />\n"?></td>
       <td><button type="button" class="btn btn-primary" data-toggle='modal' data-target='exampleModal'>Rate Game</button></td>
       
-    </tr>
-  
-  <!--Modal-->
-  <div class='modal' id='exampleModal' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class='modal-dialog'>
-      <div class='modal-content'>
-        
+    </tr>        
         <!--Modal Header-->
         <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel"><?php echo $row['gamename']?></h4>
