@@ -117,11 +117,11 @@ if($result->rowCount()>0){
 ?>  
 <script>
   function myFunction() {
-    var input, filter, card, h4, p, i, txtValue;
+    var input, filter, card-deck, h4, p, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    card = document.getElementById("card");
-    h4 = card.getElementsByTagName("h4");
+    card-deck = document.getElementById("card-deck");
+    h4 = card-deck.getElementsByTagName("h4");
     for (i = 0; i < h4.length; i++) {
       p = h4[i].getElementsByTagName("p")[0];
       if (p) {
