@@ -114,6 +114,11 @@ $colCount =+ 1;
  ?>
  
   <script>
+    
+  $('#myModal').modal({
+    backdrop: 'static' // set a default value
+  });
+    
   function myFunction() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("myInput");
