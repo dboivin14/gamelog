@@ -46,7 +46,7 @@ if($result->rowCount()>0){
               Review: <?php echo $row['reviewtext'] ?><br>
               Date Created: <?php echo $row['Date'] ?>
             </p>
-            <button type="button" class="btn btn-success openBtn" data-bs-toggle='modal' data-bs-target='#myModal'>Review Game</button>
+            <button type="button" class="btn btn-primary openBtn">Review Game</button>
           </div>
       </div>
 
@@ -57,14 +57,14 @@ if($result->rowCount()>0){
 ?>
         <!--Modal-->
        
-  <div class='modal' id='myModal'>
+  <div class='modal fade' id='myModal' role='dialog'>
     <div class='modal-dialog'>
       <div class='modal-content'>
         
         <!--Modal Header-->
         <div class="modal-header">
         <h4 class="modal-title">Review the Game!<?php //echo $row['gamename']?></h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
 
         <!-- Modal body -->
@@ -74,7 +74,7 @@ if($result->rowCount()>0){
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       
       </div>
