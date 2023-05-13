@@ -74,7 +74,7 @@ if($result->rowCount()>0){
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       
       </div>
@@ -88,7 +88,7 @@ if($result->rowCount()>0){
 ?>  
 <script>
    $('.openBtn').on('click',function(){
-      $('.modal-body').load('getContent.php',function(){
+      $('.modal-body').load('getGameContent.php',function(){
         $('#myModal').modal({show:true});
       });
     });
