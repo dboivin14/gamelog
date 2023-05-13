@@ -88,7 +88,7 @@ if($result->rowCount()>0){
 ?>  
 <script>
    $('.openBtn').on('click',function(){
-      $('.modal-body').load('getContent.php?id=2',function(){
+      $('.modal-body').load('getContent.php',function(){
         $('#myModal').modal({show:true});
       });
     });
