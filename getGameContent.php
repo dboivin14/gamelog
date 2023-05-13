@@ -13,7 +13,8 @@
         echo '<p>'.$cmsData['reviewtext'].'</p>';
         echo '<p>'.$cmsData['UserID'].'</p>'; 
         echo '<p>'.$cmsData['Date'].'</p>';
-        echo 'Test';
+      //Test to make sure modal was built
+      //echo 'Test';
     }else{ 
         echo 'Content not found....'; 
     } 
