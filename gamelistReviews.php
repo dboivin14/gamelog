@@ -57,13 +57,13 @@ if($result->rowCount()>0){
 ?>
         <!--Modal-->
        
-  <div class='modal fade' id='myModal<?php echo $row['GameID'] ?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class='modal' id='myModal<?php echo $row['GameID'] ?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
         <!--Modal Header-->
         <div class="modal-header">
-        <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
         <h4 class="modal-title">Review the Game!</h4>
         </div>
 
