@@ -1,5 +1,7 @@
-<?php include 'index.php';
+<?php include("sqlpassword.php");
+//include 'index.php';
   //Open db and call query
+    $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);?
     $sql = "SELECT * FROM reviews LEFT JOIN games ON games.GameID = reviews.GameID";
     $result= $db->prepare($sql);
     $result->execute();
