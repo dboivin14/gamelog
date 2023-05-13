@@ -67,7 +67,7 @@ if($result->rowCount()>0){
 ?>
         <!--Modal-->
        
-  <div class='modal' id='myModal<?php echo $row['GameID']?>' tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class='modal' id='#myModal<?php echo $row['GameID']?>' tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
