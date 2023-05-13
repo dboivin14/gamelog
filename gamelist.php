@@ -71,12 +71,12 @@ $colCount =+ 1;
     <tr>
       <td><?php echo $row['gamename']."<br />\n"?></td>
       <td><?php echo $row['rating']."<br />\n"?></td>
-      <td><button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal'>Rate Game</button></td>
+      <td><button type="button" class="btn btn-primary" data-toggle='modal' data-target='#myModal'>Rate Game</button></td>
       
     </tr>
   
   <!--Modal-->
-  <div class='modal' id='myModal' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class='modal' id='exampleModal'.'colCount' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
