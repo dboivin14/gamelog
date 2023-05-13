@@ -46,7 +46,7 @@ if($result->rowCount()>0){
               Review: <?php echo $row['reviewtext'] ?><br>
               Date Created: <?php echo $row['Date'] ?>
             </p>
-            <button type="button" class="btn btn-primary openBtn">Review Game</button>
+            <button type="button" class="btn btn-success openBtn">Review Game</button>
           </div>
       </div>
 
@@ -63,8 +63,8 @@ if($result->rowCount()>0){
         
         <!--Modal Header-->
         <div class="modal-header">
-        <h4 class="modal-title">Review the Game!<?php //echo $row['gamename']?></h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Review the Game!</h4>
         </div>
 
         <!-- Modal body -->
