@@ -5,12 +5,13 @@
     $result->execute();
   //Initiate 
      
-    if($query->num_rows > 0){ 
-        $cmsData = $query->fetch(PDO::FETCH_ASSOC); 
+    if($result->num_rows > 0){ 
+        $cmsData = $result->fetch(PDO::FETCH_ASSOC); 
         echo '<h5>'.$cmsData['gamename'].'</h5>'; 
         echo '<p>'.$cmsData['reviewtext'].'</p>';
         echo '<p>'.$cmsData['UserID'].'</p>'; 
-        echo '<p>'.$cmsData['Date'].'</p>'; 
+        echo '<p>'.$cmsData['Date'].'</p>';
+        echo 'Test';
     }else{ 
         echo 'Content not found....'; 
     } 
