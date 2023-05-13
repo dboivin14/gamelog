@@ -19,16 +19,16 @@
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
-#card-deck p {
+#card p {
   text-align: center;
   padding: 12px;
 }
 
-#card-deck h4 {
+#card h4 {
   border-bottom: 1px solid #ddd;
 }
 
-#card-deck h4.header, #myTable h4:hover {
+#card h4.header, #card h4:hover {
   background-color: #f1f1f1;
 }
 }
@@ -120,8 +120,8 @@ if($result->rowCount()>0){
     var input, filter, card-deck, h4, p, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    card-deck = document.getElementById("card-deck");
-    h4 = card-deck.getElementsByTagName("h4");
+    card = document.getElementById("card");
+    h4 = card.getElementsByTagName("h4");
     for (i = 0; i < h4.length; i++) {
       p = h4[i].getElementsByTagName("p")[0];
       if (p) {
