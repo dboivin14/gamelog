@@ -15,7 +15,4 @@
     }else{ 
         echo 'Content not found....'; 
     } 
-}else{ 
-    echo 'Content not found....'; 
- 
 ?>
