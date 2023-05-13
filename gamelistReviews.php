@@ -46,7 +46,7 @@ if($result->rowCount()>0){
               Review: <?php echo $row['reviewtext'] ?><br>
               Date Created: <?php echo $row['Date'] ?>
             </p>
-            <button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal'>Review Game</button>
+            <button type="button" class="btn btn-success openBtn" data-bs-toggle='modal' data-bs-target='#myModal'>Review Game</button>
           </div>
       </div>
 
@@ -89,9 +89,9 @@ if($result->rowCount()>0){
 ?>  
   <script>
    $('.openBtn').on('click',function(){
-    $('.modal-body').load('getContent.php?id=2',function(){
+      $('.modal-body').load('getContent.php?id=2',function(){
         $('#myModal').modal({show:true});
-    });
+      });
     });
   function myFunction() {
     var input, filter, card, h4, p, i, txtValue;
