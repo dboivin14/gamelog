@@ -19,6 +19,18 @@
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
+#card-deck p {
+  text-align: center;
+  padding: 12px;
+}
+
+#card-deck h4 {
+  border-bottom: 1px solid #ddd;
+}
+
+#card-deck h4.header, #myTable h4:hover {
+  background-color: #f1f1f1;
+}
 }
 
 </style>
