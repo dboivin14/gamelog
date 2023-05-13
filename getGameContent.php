@@ -5,7 +5,7 @@
     $result->execute();
   //Initiate 
      
-    if($result->num_rows > 0){ 
+    if($result->rowCount() > 0){ 
         $cmsData = $result->fetch(PDO::FETCH_ASSOC); 
         echo '<h5>'.$cmsData['gamename'].'</h5>'; 
         echo '<p>'.$cmsData['reviewtext'].'</p>';
