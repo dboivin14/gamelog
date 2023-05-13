@@ -56,7 +56,7 @@ $result = $db->prepare($sql);
 $result->execute();
 $colCount = 0;
 if ($result->rowCount() > 0) {
-$colCount =+ 1;  
+  
   ?>
   <table id="myTable" class="center">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
@@ -66,7 +66,7 @@ $colCount =+ 1;
     </tr>
  <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
-
+$colCount =+ 1;
   ?>
     
     <tr>
@@ -77,7 +77,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)){
     </tr>
   
   <!--Modal-->
-  <div class='modal' id='exampleModal<?php echo $colCount?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class='modal' id='exampleModal<?php echo $row['GameID']?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
