@@ -51,36 +51,7 @@ if($result->rowCount()>0){
       </div>
 
         </div>
-<!--      
-  <div class='modal' id='myModal'>
-    <div class='modal-dialog'>
-      <div class='modal-content'>
- -->       
-        <!--Modal Header--><!--
-        <div class="modal-header">
-        <h4 class="modal-title"><?php echo $row['gamename']?></h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
--->
-        <!-- Modal body -->
-      <!--
-        <div class="modal-body">
-          Review: <?php echo $row['reviewtext']?><br>
-          UserID: <?php echo $row['UserID']?><br>
-          Date Created: <?php echo $row['Date']?>
-        </div>
-      -->
-        <!-- Modal footer -->
-      <!--
-        <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" id="btnsubmit" class="btn btn-primary"> Save Changes </button>
-        </div>
-      
-      </div>
-    </div>
-  </div>
- -->     
+ 
 <?php 
 }
 ?>
