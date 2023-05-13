@@ -63,8 +63,8 @@ if($result->rowCount()>0){
         
         <!--Modal Header-->
         <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel">Review the Game!</h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Review the Game!</h4>
         </div>
 
         <!-- Modal body -->
@@ -74,7 +74,8 @@ if($result->rowCount()>0){
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="btnsubmit" class="btn btn-primary"> Save Changes </button>
         </div>
       
       </div>
