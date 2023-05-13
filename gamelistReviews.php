@@ -88,6 +88,11 @@ if($result->rowCount()>0){
 
 ?>  
   <script>
+   $('.openBtn').on('click',function(){
+    $('.modal-body').load('getContent.php?id=2',function(){
+        $('#myModal').modal({show:true});
+    });
+    });
   function myFunction() {
     var input, filter, card, h4, p, i, txtValue;
     input = document.getElementById("myInput");
