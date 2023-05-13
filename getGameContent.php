@@ -1,4 +1,4 @@
-<?php 
+<?php include 'index.php';
   //Open db and call query
     $sql = "SELECT * FROM reviews LEFT JOIN games ON games.GameID = reviews.GameID";
     $result= $db->prepare($sql);
