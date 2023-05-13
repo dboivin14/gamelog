@@ -87,9 +87,9 @@ if($result->rowCount()>0){
 
 ?>  
 <script>
-   '.openBtn'.on('click',function(){
-      '.modal-body'.load('getGameContent.php',function(){
-        '#myModal'.modal({show:true});
+   $('.openBtn').on('click',function(){
+      $('.modal-body').load('getGameContent.php',function(){
+        $('#myModal').modal({show:true});
       });
     });
   function myFunction() {
