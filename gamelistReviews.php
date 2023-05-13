@@ -46,7 +46,7 @@ if($result->rowCount()>0){
               Review: <?php echo $row['reviewtext'] ?><br>
               Date Created: <?php echo $row['Date'] ?>
             </p>
-            <button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal<?php echo $row['GameID'] ?>'>Review Game</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal<?php echo $row['GameID']?>'>Rate Game</button></td>
           </div>
       </div>
 
