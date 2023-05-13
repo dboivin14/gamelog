@@ -63,21 +63,18 @@ if($result->rowCount()>0){
         
         <!--Modal Header-->
         <div class="modal-header">
-        <h4 class="modal-title"><?php //echo $row['gamename']?></h4>
+        <h4 class="modal-title">Review the Game!<?php //echo $row['gamename']?></h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal">&times;</button>
         </div>
 
         <!-- Modal body -->
         <div class="modal-body">
-          Review: <?php //echo $row['reviewtext']?><br>
-          UserID: <?php //echo $row['UserID']?><br>
-          Date Created: <?php //echo $row['Date']?>
+  <!-- Dynamic content loaded here -->
         </div>
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-          <button type="button" id="btnsubmit" class="btn btn-primary"> Save Changes </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       
       </div>
@@ -89,7 +86,7 @@ if($result->rowCount()>0){
 }
 
 ?>  
-  <script>
+<script>
    $('.openBtn').on('click',function(){
       $('.modal-body').load('getContent.php?id=2',function(){
         $('#myModal').modal({show:true});
@@ -113,7 +110,7 @@ if($result->rowCount()>0){
       }       
     }
   }
-  </script>
+</script>
 
 </body>
 </html>
