@@ -76,13 +76,13 @@ $colCount =+ 1;
     </tr>
   
   <!--Modal-->
-  <div class='modal' id='myModal'>
+  <div class='modal' id='myModal' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
         <!--Modal Header-->
         <div class="modal-header">
-        <h4 class="modal-title"><?php echo $row['gamename']?></h4>
+        <h4 class="modal-title" id="exampleModalLabel"><?php echo $row['gamename']?></h4>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
 
