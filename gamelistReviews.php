@@ -117,7 +117,7 @@ if($result->rowCount()>0){
 ?>  
 <script>
   function myFunction() {
-    var input, filter, card-deck, h4, p, i, txtValue;
+    var input, filter, card, h4, p, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     card = document.getElementById("card");
