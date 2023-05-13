@@ -9,6 +9,16 @@
   .card{
     flex-basis: 200px;
   }
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
 }
 
 </style>
@@ -57,7 +67,7 @@ if($result->rowCount()>0){
 ?>
         <!--Modal-->
        
-  <div class='modal' id='myModal<?php echo $row['GameID'] ?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class='modal' id='myModal<?php echo $row['GameID']?>' tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class='modal-dialog'>
       <div class='modal-content'>
         
@@ -69,7 +79,13 @@ if($result->rowCount()>0){
 
         <!-- Modal body -->
         <div class="modal-body">
-  <!-- Dynamic content loaded here -->
+            <p class="card-text">
+              Steam ID: <?php echo $row['GameID'] ?><br>
+              Rating: <?php echo $row['rating'] ?><br>
+              User: <?php echo $row['ReviewID'] ?><br>
+              Review: <?php echo $row['reviewtext'] ?><br>
+              Date Created: <?php echo $row['Date'] ?>
+            </p>
         </div>
 
         <!-- Modal footer -->
