@@ -56,6 +56,7 @@ $result = $db->prepare($sql);
 $result->execute();
 $colCount = 0;
 if ($result->rowCount() > 0) {
+$colCount =+ 1;  
   ?>
   <table id="myTable" class="center">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
@@ -65,7 +66,7 @@ if ($result->rowCount() > 0) {
     </tr>
  <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
-$colCount =+ 1;
+
   ?>
     
     <tr>
