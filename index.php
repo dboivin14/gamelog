@@ -6,7 +6,10 @@ session_start();
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-      body {margin: 0;}
+      body {
+        margin: 0;
+        background-color: grey;
+      }
       
       ul.topnav {
         list-style-type: none;
