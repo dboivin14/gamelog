@@ -96,10 +96,10 @@ span.psw {
     <form>
      <div class="container">
         <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <input type="text" id='username' placeholder="Enter Username" name="username" autocomplete='off' required>
 
         <label for="pwd"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="pwd" required>
+        <input type="password" id='pwd' placeholder="Enter Password" name="pwd" autocomplete='off' required>
 
         <button type="submit">Login</button>
         <label>
