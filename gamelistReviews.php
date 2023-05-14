@@ -32,9 +32,7 @@
   background-color: #f1f1f1;
 }
   
-.container {
-  padding: 10px;
-  }
+
 }
 
 </style>
