@@ -11,7 +11,7 @@ $pwd = $_POST["pwd"];
   $result->execute();
 
   if (gettype($result) == "object") {
-    if ($result->num_rows > 0) {
+    if ($result->rowCount() > 0) {
       $row = $result->fetch_assoc();
       $firstname = $row['firstname'];
       $lastname = $row['lastname'];
