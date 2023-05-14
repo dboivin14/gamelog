@@ -1,4 +1,11 @@
-<?php include 'index.php'; ?>
+<?php include 'index.php'; 
+if (!(isset($_SESSION['name']))) {
+  header("Location:index.php");
+  exit;
+} else {
+  $user = $_SESSION['name'];
+}
+?>
 
 <!DOCTYPE html>
 <html>
