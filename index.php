@@ -2,6 +2,8 @@
 
 $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword); 
 session_start();
+if (isset($GET['msg']))
+  echo "<h2 class='w3-center'>" . $_GET['msg'] . "</h2>";
 ?>
 
 <!DOCTYPE html>
