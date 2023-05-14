@@ -12,7 +12,7 @@ $pwd = $_POST["pwd"];
 
   if (gettype($result) == "object") {
     if ($result->rowCount() > 0) {
-      $row = $result->fetch_assoc();
+      $row = $result->fetch(PDO::FETCH_ASSOC);
       $firstname = $row['firstname'];
       $lastname = $row['lastname'];
       session_start();
