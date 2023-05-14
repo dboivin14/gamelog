@@ -2,6 +2,6 @@
 
 session_start();
 
-print_r($_session);
+print_r($_SESSION);
 
 ?>
