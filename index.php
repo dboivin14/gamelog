@@ -1,9 +1,7 @@
 <?php include("sqlpassword.php");
 
 $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword); 
-session_start();
-if (isset($_SESSION['id']))
-  $name = $_SESSION['id'];
+
 ?>
 
 <!DOCTYPE html>
