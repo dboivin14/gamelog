@@ -12,6 +12,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     if ($result) {
        password_verify($_POST["password"], $result("password"));
+        
+        session_start();
+        
+        $_SESSION["userID"] = $users["id"];
+        header("location: LoginIndex.php");
+        exit;
                        }
             }
 ?>
