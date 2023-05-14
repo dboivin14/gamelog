@@ -17,7 +17,7 @@ $pwd = $_POST["pwd"];
       $firstname = $row['firstname'];
       $lastname = $row['lastname'];
       session_start();
-      $_SESSION['id'] = $UserID
+      $_SESSION['id'] = $UserID;
       $_SESSION['name'] =    $firstname." ".$lastname;
       header("Location:welcome.php");
       exit;
