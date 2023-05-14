@@ -19,7 +19,7 @@ $pwd = $_POST["pwd"];
       $_SESSION['id'] = $firstname." ".$lastname;
       header("Location:welcome.php");
       exit;
-    } else
+    } else { 
       echo "Login Failed";
     }
     
