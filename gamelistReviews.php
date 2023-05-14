@@ -49,13 +49,14 @@ $result->execute();
 if($result->rowCount()>0){
   //echo $row[gamename];
     ?>
- 
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game"> 
     <div class='row row-cols-3 g-3' id='row'>
       <div class ='col'>
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMES:</h4>
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game"> 
+
           </div>
       </div>
       </div>
