@@ -117,22 +117,22 @@ if($result->rowCount()>0){
 
 ?>  
 <script>
-  function myFunction() {
-    var input, filter, row, h4, p, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    row = document.getElementById("row");
-    h4 = row.getElementsByTagName("h4");
-    for (i = 0; i < h4.length; i++) {
-      p = h4[i].getElementsByTagName("p")[0];
-      if (p) {
-        txtValue = p.textContent || p.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          h4[i].style.display = "";
-        } else {
-          h4[i].style.display = "none";
-        }
-      }       
+ function myFunction() {
+  var input, filter, cards, cardContainer, title, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  cardContainer = document.getElementById("row");
+  cards = cardContainer.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+    title = cards[i].querySelector(".card-title");
+    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+       
     }
   }
 </script>
