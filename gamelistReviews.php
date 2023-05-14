@@ -50,14 +50,7 @@ if($result->rowCount()>0){
 <h4>GAMES:</h4>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game"> 
     <div class='row' id='row'>
-      <div class ='col'>
-      <div class='card'>
-        <div class="card-header">
-            
 
-          </div>
-      </div>
-      </div>
       <?php
       while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       ?>
