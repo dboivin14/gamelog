@@ -69,7 +69,7 @@ if($result->rowCount()>0){
           </div>
       </div>
 
-        </div>
+        
  
 <?php 
 }
@@ -111,7 +111,8 @@ if($result->rowCount()>0){
 <?php 
 }
 
-?>  
+?>
+</div>
 <script>
  function myFunction() {
   var input, filter, cards, cardContainer, title, i;
