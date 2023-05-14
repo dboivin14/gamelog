@@ -133,7 +133,7 @@ if($result->rowCount()>0){
   }
 }
        
-    }
+    
   }
 </script>
 
