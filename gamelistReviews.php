@@ -54,7 +54,7 @@ if($result->rowCount()>0){
       <?php
       while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       ?>
-      <div class ='col'>
+      <div class ='col' span='4'>
       <div class="card" id='card'>  
           <div class="card-body">
             <h4 class="card-title"><?php echo $row['gamename'] ?></h4>
