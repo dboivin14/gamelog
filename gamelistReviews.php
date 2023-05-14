@@ -37,9 +37,9 @@
 </head>
 <?php
 $sql = "SELECT * FROM reviews LEFT JOIN games ON games.GameID = reviews.GameID";
-$result = queryDB($sql);
-//$result= $db->prepare($sql);
-//$result->execute();
+//$result = queryDB($sql);
+$result= $db->prepare($sql);
+$result->execute();
 //$rows = $result->fetchAll();
 //foreach ($rows as $games){
 if($result->rowCount()>0){
