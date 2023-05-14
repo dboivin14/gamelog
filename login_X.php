@@ -71,8 +71,8 @@ span.psw {
   <body>
     <h2>Login Form</h2>
 
-    <form>
-     <div class="container" action='loginAction.php' method='post'>
+    <form name='signin' class="container" action='loginAction.php' method='post'>
+     <div>
         <label for="username"><b>Username</b></label>
         <input type="text" id='username' placeholder="Enter Username" name="username" autocomplete='off' required>
 
