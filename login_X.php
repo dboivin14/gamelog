@@ -79,7 +79,7 @@ span.psw {
         <label for="pwd"><b>Password</b></label>
         <input type="password" id='pwd' placeholder="Enter Password" name="pwd" autocomplete='off' required>
 
-        <button type="submit">Login</button>
+        <button type="submit" class="btn btn-primary">Login</button>
         <label>
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
