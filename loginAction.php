@@ -19,7 +19,9 @@ $pwd = $_POST["pwd"];
       session_start();
       $_SESSION['id'] = $UserID;
       $_SESSION['name'] =    $firstname." ".$lastname;
-      header("Location:index.php");
+        if(isset($_SESSION["id"])) {
+            header("Location:index.php");
+        }
       exit;
     } else { 
       echo "Login Failed";
