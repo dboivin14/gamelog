@@ -28,7 +28,7 @@
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
       <div class="mb-3 mt-3">
-        <label for="user" class="form-label">Username:</label>
+        <label for="username" class="form-label">Username:</label>
         <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" autocomplete="off" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
