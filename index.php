@@ -52,14 +52,17 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
   <li><a class="active" href="index.php">Home</a></li>
   <li><a href="gamelist.php">Games</a></li>
   <li><a href="gamelistReviews.php">Reviews</a></li>
-  <?php if(isset($name)){ ?>
+  <?php if(isset($name)): ?>
     <li class='right'><a href='#account'><?php echo "Welcome " . $name?></a></li>
  
       <li class='right'><a href="logoutAction.php">Logout</a></li> 
   <?php } else{ ?>
     <li class="right"><a href="registration_X.php">Register</a></li>
     <li class="right"><a href="login_X.php">Login</a></li>
-  <?php } ?>
+  <?php } 
+    endif;
+    ?>
+  
 </ul>
   
 <div class="imgcontainer">
