@@ -31,7 +31,9 @@
 #card h4.header, #card h4:hover {
   background-color: #f1f1f1;
 }
-  
+.col {
+  column-count: 3; 
+}
 
 }
 
