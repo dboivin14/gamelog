@@ -24,9 +24,9 @@ $pwd = $_POST["pwd"];
   } else
     echo $result . "<br>";
     
-    $sql = sprintf("SELECT * FROM users
-        WHERE username = '%s'",
-        $_POST["usernmame"]);
+    //$sql = sprintf("SELECT * FROM users
+        //WHERE username = '%s'",
+        //$_POST["usernmame"]);
 
 
 ?>
