@@ -10,7 +10,7 @@ $pwd = $_POST["pwd"];
   $result= $db->prepare($sql);
   $result->execute();
 
-  if (gettype($result) == "object") {
+
     if ($result->rowCount() > 0) {
       $row = $result->fetch(PDO::FETCH_ASSOC);
       $firstname = $row['firstname'];
@@ -21,8 +21,7 @@ $pwd = $_POST["pwd"];
       exit;
     } else
       echo "Login Failed";
-  } else
-    echo $result . "<br>";
+    }
     
     //$sql = sprintf("SELECT * FROM users
         //WHERE username = '%s'",
