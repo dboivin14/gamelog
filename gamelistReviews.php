@@ -46,7 +46,7 @@ if($result->rowCount()>0){
   //echo $row[gamename];
     ?>
  
-    <div class='row row-cols-3 g-3'>
+    <div class='row row-cols-3 g-3' id='row'>
       <div class ='col'>
       <div class='card'>
         <div class="card-header">
@@ -118,11 +118,11 @@ if($result->rowCount()>0){
 ?>  
 <script>
   function myFunction() {
-    var input, filter, card, h4, p, i, txtValue;
+    var input, filter, row, h4, p, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    card = document.getElementById("card");
-    h4 = card.getElementsByTagName("h4");
+    row = document.getElementById("row");
+    h4 = row.getElementsByTagName("h4");
     for (i = 0; i < h4.length; i++) {
       p = h4[i].getElementsByTagName("p")[0];
       if (p) {
