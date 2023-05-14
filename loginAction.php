@@ -4,7 +4,7 @@
 $user = $_POST["username"];
 $pwd = $_POST["pwd"];
 
-  $sql = "select username, password, firstname, lastname from users where username = '".$user.
+  $sql = "select UserID, username, password, firstname, lastname from users where username = '".$user.
           "' and password = '".$pwd."'";
   
   $result= $db->prepare($sql);
@@ -13,10 +13,12 @@ $pwd = $_POST["pwd"];
 
     if ($result->rowCount() > 0) {
       $row = $result->fetch(PDO::FETCH_ASSOC);
+      $UserID = $row['UserID'];
       $firstname = $row['firstname'];
       $lastname = $row['lastname'];
       session_start();
-      $_SESSION['id'] = $firstname." ".$lastname;
+      $_SESSION['id'] = $UserID
+      $_SESSION['name'] =    $firstname." ".$lastname;
       header("Location:welcome.php");
       exit;
     } else { 
