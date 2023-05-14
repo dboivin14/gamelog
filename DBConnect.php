@@ -12,12 +12,14 @@ function openDB() {
   global $servername, $username, $password, $dbname, $conn;
 
 // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname);
-  if ($conn->connect_error)
-    return $conn->connect_error;
-  else
+  try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return "Connected";
-
+  } catch (PDOException $e) {
+    return $e->getMessage();
+  }
 }
 
 function closeDB() {
