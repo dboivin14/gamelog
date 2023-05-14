@@ -38,15 +38,7 @@
         <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
-      </div>
-      <div class="mb-3">
-        <label for="password" class="form-label"> Confirm Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="Confirm password" name="password" required>
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Please fill out this field.</div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      </div>   
-      
+      </div>      
     </form>
    </div>
    <label for="login"><a href="login.html">Already have an account?</a></label><br>
