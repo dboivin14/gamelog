@@ -1,12 +1,4 @@
-<?php include 'index.php'; include 'DBConnect.php';
-
-if (!(isset($_SESSION['name']))) {
-  header("Location:index.php");
-  exit;
-} else {
-  $user = $_SESSION['name'];
-}
-?>
+<?php include 'index.php'; include 'DBConnect.php';?>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
