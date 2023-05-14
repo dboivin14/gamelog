@@ -1,6 +1,6 @@
 <?php include("sqlpassword.php");
 include("welcome.php");
-$db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);session_start();?>
+$db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);?>
 
 <!DOCTYPE html>
 <html>
