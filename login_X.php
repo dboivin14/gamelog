@@ -93,7 +93,7 @@ span.psw {
   <body>
     <h2>Login Form</h2>
 
-    <form method="post">
+    <form action="/gamelog/LoginIndex.php" method="post">
      <div class="container">
         <label for="username"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
