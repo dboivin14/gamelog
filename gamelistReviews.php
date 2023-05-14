@@ -50,7 +50,7 @@ if($result->rowCount()>0){
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for games.." title="Type in a game"> 
     <div class='row' id='row'>
-      <div class ='col-large'>
+      <div class ='col-lg'>
       <div class='card'>
         <div class="card-header">
             <h4 class="card-title">GAMES:</h4>
