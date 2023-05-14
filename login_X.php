@@ -1,26 +1,4 @@
-<?php include 'index.php'; 
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    
-    $sql = sprintf("SELECT * FROM users
-        WHERE username = '%s'",
-        $_POST["usernmame"]);
-    
-    $stmt= $db->prepare($sql);
-    $stmt->execute([username]);
-    $result = $stmt->fetch_assoc();
-    
-    if ($result) {
-       password_verify($_POST["password"], $result("password"));
-        
-        session_start();
-        
-        $_SESSION["userID"] = $result["id"];
-        header("Location: LoginIndex.php");
-        exit;
-                   }
-         }
-?>
+<?php include 'index.php'; ?>
 
 <head>
     <Title>Sign in to your account</Title>
