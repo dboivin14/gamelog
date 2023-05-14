@@ -1,5 +1,5 @@
 <?php
 clearstatcache();
 unset($_SESSION['id']);
-header("Location:index.php");
+header("Location:welcome.php");
 ?>
