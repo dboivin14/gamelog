@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         session_start();
         
-        $_SESSION["userID"] = $users["id"];
+        $_SESSION["userID"] = $result["id"];
         header("location: LoginIndex.php");
         exit;
                    }
