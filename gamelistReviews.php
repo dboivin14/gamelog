@@ -122,7 +122,7 @@ if($result->rowCount()>0){
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     card = document.getElementById("card");
-    h4 = card.getElementsByTagName("h4");
+    h4 = document.getElementsByTagName("h4");
     for (i = 0; i < h4.length; i++) {
       p = h4[i].getElementsByTagName("p")[0];
       if (p) {
