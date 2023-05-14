@@ -52,8 +52,9 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
   <li>  
       <li class='right'><a href="logoutAction.php" style="color:#FF0000" title="">Logout</a></li> 
   <?php } else{ ?>
-  <li class="right"><a href="registration_X.php">Register</a></li>
-  <li class="right"><a href="login_X.php">Login</a></li>
+    <li class="right"><a href="registration_X.php">Register</a></li>
+    <li class="right"><a href="login_X.php">Login</a></li>
+  <?php } ?>
 </ul>
   
 <div class="imgcontainer">
