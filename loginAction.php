@@ -25,6 +25,7 @@ $pwd = $_POST["pwd"];
       echo "Login Failed";
     }
     
+echo$ result . "<br>';
     //$sql = sprintf("SELECT * FROM users
         //WHERE username = '%s'",
         //$_POST["usernmame"]);
