@@ -1,7 +1,9 @@
 <?php include("sqlpassword.php");
 
 $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword); 
-
+session_start();
+if (isset($_SESSION['id']))
+  $name = $_SESSION['id'];
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +57,7 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
   <li><a href="gamelist.php">Games</a></li>
   <li><a href="gamelistReviews.php">Reviews</a></li>
   <?php if(isset($name)): ?>
-    <li class='right'><a href='#account'>Welcome<?php echo $name?></a></li>
+    <li class='right'><a href='#account'>Welcome <?php echo $name?></a></li>
  
       <li class='right'><a href="logoutAction.php">Logout</a></li> 
   <?php else: ?>
