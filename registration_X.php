@@ -5,7 +5,7 @@
   <form name="registration" action="registrationAction.php" class="was-validated">
       <div class="mb-3">
         <label for="firstname" class="form-label">First Name:</label>
-        <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" autocomplete="off" required>
+        <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" autocomplete="on" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
       </div>
