@@ -18,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION["userID"] = $users["id"];
         header("location: LoginIndex.php");
         exit;
-                       }
-            }
+                   }
+         }
 ?>
 
 <head>
