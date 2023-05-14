@@ -72,7 +72,7 @@ span.psw {
     <h2>Login Form</h2>
 
     <form>
-     <div class="container">
+     <div class="container" action='loginAction.php' method='post'>
         <label for="username"><b>Username</b></label>
         <input type="text" id='username' placeholder="Enter Username" name="username" autocomplete='off' required>
 
