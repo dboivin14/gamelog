@@ -1,6 +1,6 @@
 <?php 
   
-if (isset($_POST)['GameID']) && is_numeric($_POST['GameID'])) {
+
   
   $GameID = (int)$_POST['GameID'];
   $stmt = $pdo -> prepare('SELECT * FROM games WHERE GameID = ?');
@@ -19,7 +19,7 @@ if (isset($_POST)['GameID']) && is_numeric($_POST['GameID'])) {
       }
  else {
    $_SESSION['usergames'] = array($gameID)
- }
+ 
   
   
 ?>
