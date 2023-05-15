@@ -142,7 +142,7 @@ $colCount =+ 1;
     }
   }
   function updateRating() { 
-    if (isset($_POST['rating']) and !empty($_POST['rating'])){
+    if (isset($_POST['rating'])){
     $column_1 = $_POST['Col1'];
     $column_2 = $_POST['Col2'];
     foreach ($_POST['KeyColumn'] as $key => $variable){
