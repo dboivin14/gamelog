@@ -1,4 +1,4 @@
-<?php include("sqlpassword.php");
+<?php include("sqlpassword.php"), include("gamelistGameAdd.php");
 session_start();
 
 $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
