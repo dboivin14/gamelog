@@ -40,25 +40,17 @@ session_start();
         ul.topnav li {float: none;}
       }
       </style>
-    <title>Game Log Test Page</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
   </head>
 <body>
   <ul class="topnav">
   <li><a class="active" href="index.php">Home</a></li>
   <li><a href="gamelist.php">Games</a></li>
   <li><a href="gamelistReviews.php">Reviews</a></li>
-  <?php if(isset($name)): ?>
-    <li class='right'><a href='#account'>Welcome <?php echo $name?></a></li>
  
-      <li class='right'><a href="logoutAction.php">Logout</a></li> 
-  <?php else: ?>
     <li class="right"><a href="registration_X.php">Register</a></li>
     <li class="right"><a href="login_X.php">Login</a></li>
-  <?php endif; ?>
+ 
   
 </ul>
   
