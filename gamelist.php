@@ -62,7 +62,7 @@ $colCount = 0;
 if ($result->rowCount() > 0) {
   
   ?>
-  <form>
+  <form name="gamelist" action="gamelistGameAdd.php">
   <table id="myTable" class="center">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
