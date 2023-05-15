@@ -67,6 +67,8 @@ if ($result->rowCount() > 0) {
       <th style="width:60%;">Game</th>
       <th style="width:30%;">Rating</th>
       <th style="width:10%">Rate</th>
+      <th style="width:10%">Add</th>
+
     </tr>
  <?php         
 while ($row = $result->fetch(PDO::FETCH_ASSOC)){
