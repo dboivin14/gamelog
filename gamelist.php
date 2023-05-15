@@ -62,6 +62,7 @@ $colCount = 0;
 if ($result->rowCount() > 0) {
   
   ?>
+  <form>
   <table id="myTable" class="center">
     <tr COLSPAN=2 BGCOLOR="#6D8FFF">
       <th style="width:60%;">Game</th>
@@ -115,6 +116,7 @@ $colCount =+ 1;
 }
  ?>
 </table>
+  </form>
 <?php
 }
  ?>
