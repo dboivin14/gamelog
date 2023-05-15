@@ -68,7 +68,7 @@ button:hover {
 ?>
   
   <a href = "gamelist.php">
-    <button> Add Games </button>
+    <button><a href="gamelistGameAdd.php"> Add Games </a> </button>
   </body>
   
   
