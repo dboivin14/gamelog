@@ -41,15 +41,10 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
         ul.topnav li.right, 
         ul.topnav li {float: none;}
       }
-   button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
+   .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
     </style>
   <body>
    <ul class="topnav">
