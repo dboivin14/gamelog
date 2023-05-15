@@ -157,7 +157,10 @@ $colCount =+ 1;
                     $same = false;
                 }
                 if (!$same){
-                     /* update sql on this line */
+                     <?php 
+                      $sql ='INSERT INTO reviews (rating) VALUES (?)';
+                      $stmt =$db->prepare($sql);
+                      $stmt->execute();
                 }
             }
         }
