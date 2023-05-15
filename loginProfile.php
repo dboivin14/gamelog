@@ -1,4 +1,4 @@
-<?php include("sqlpassword.php"); include("gamelistGameAdd.php");
+<?php 
 include('index.php');
 ?>
 
