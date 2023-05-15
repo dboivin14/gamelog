@@ -4,7 +4,7 @@ if (isset($_POST)['GameID']) && is_numeric($_POST['GameID'])) {
   
   $GameID = (int)$_POST['GameID'];
   $stmt = $pdo -> prepare('SELECT * FROM games WHERE GameID = ?');
-  $stmt -> execute([$_POST['GameID]];
+  $stmt -> execute([$_POST['GameID']];
   
   $game = $stmt->fetch(PDO::FETCH_ASSOC);
   
