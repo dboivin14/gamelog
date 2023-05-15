@@ -13,7 +13,7 @@
 $stmt = $db->prepare($sql);
 $stmt->execute();
 
-  $_SESSION['usergames'] = array($gameID)
+  $_SESSION['usergames'] = array($GameID)
 	  
   
  
