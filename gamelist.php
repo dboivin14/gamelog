@@ -79,7 +79,7 @@ $colCount =+ 1;
       <td><?php echo $row['gamename']."<br />\n"?></td>
       <td><?php echo $row['rating']."<br />\n"?></td>
       <td><button type="button" class="btn btn-primary" data-bs-toggle='modal' data-bs-target='#myModal<?php echo $row['GameID']?>'>Rate Game</button></td>
-      <td><button type="button" class="btn btn-primary" data-bs-toggle='modal'><a href='gamelistGameAdd.php'>Add game</a></button></td>
+      <td><button type="button" class="btn btn-primary" ><a href='gamelistGameAdd.php'>Add game</a></button></td>
     </tr>
   
   <!--Modal-->
