@@ -10,7 +10,7 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
  <style>
       body {
         margin: 0;
-        background-color: grey;
+        
       }
       
       ul.topnav {
