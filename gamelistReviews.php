@@ -14,7 +14,7 @@
     flex-basis: 200px;
   }
 #myInput {
-  background-image: url('https://www.pikpng.com/pngl/m/603-6032800_how-to-create-css-search-box-form-design.png');
+  background-image: url('/css/searchicon.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
