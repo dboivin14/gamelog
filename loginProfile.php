@@ -54,10 +54,10 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
 button:hover {
   opacity: 0.8;
 }
-       .cancelbtn {
-          width: auto;
-          padding: 10px 18px;
-         background-color: #f44336;
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
   
    }
     </style>
