@@ -1,5 +1,6 @@
-<?php 
-  
+<?php include("sqlpassword.php");
+
+  $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
 
   
   $GameID = (int)$_POST['GameID'];
