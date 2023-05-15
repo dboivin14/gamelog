@@ -143,7 +143,7 @@ $colCount =+ 1;
       }       
     }
   }
-  function updateRating() { 
+  btnsubmit.onclick = function updateRating() { 
     if (isset($_POST['rating'])){
     $column_1 = $_POST['Col1'];
     $column_2 = $_POST['Col2'];
