@@ -47,8 +47,6 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
     <li><a class="active" href="index.php">Home</a></li>
     <li><a href="gamelist.php">Games</a></li>
     <li><a href="gamelistReviews.php">Reviews</a></li>
-   <li class="right"><a href="registration_X.php">Register</a></li>
-    <li class="right"><a href="login_X.php">Login</a></li>
   </ul>
    <h1>Personal Page</h1>
  </body>
