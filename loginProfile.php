@@ -41,9 +41,10 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
         ul.topnav li.right, 
         ul.topnav li {float: none;}
       }
-   .cancelbtn {
-  width: auto;
-  padding: 10px 18px;
+       .cancelbtn {
+          width: auto;
+          padding: 10px 18px;
+         background-color: #f44336;
   
    }
     </style>
@@ -60,7 +61,7 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
  echo 'Welcome, ', $_SESSION["name"];
 ?>
   
-  <div class="container" style="background-color:#f1f1f1">
+  <div class="container">
         <button type="button" class="cancelbtn">Cancel</button>
   </body>
   
