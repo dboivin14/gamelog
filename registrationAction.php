@@ -14,7 +14,7 @@ $sql = "INSERT IGNORE INTO users (username, email, firstname, lastname, password
 
 $stmt= $db->prepare($sql);
 $stmt->execute([$username, $email, $firstname, $lastname, $password, $dob]);
-$stmt->close();
+
 
 
 
