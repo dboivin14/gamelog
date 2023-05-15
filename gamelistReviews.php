@@ -1,6 +1,6 @@
 <?php include 'index.php'; include 'DBConnect.php';
 
-session_start();
+
 
 ?>
 <head>
