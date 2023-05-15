@@ -1,4 +1,4 @@
-<?php include 'index.php'; include 'DBConnect.php';
+<?php
 session_start();
 ?>
 
