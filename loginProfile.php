@@ -61,4 +61,6 @@ session_start();
   <?php endif; ?>
   
 </ul>
+  
+  <h1>Personal Page</h1>
 </html>
