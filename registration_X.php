@@ -2,7 +2,7 @@
 <div class="container w-75 mt-3">
   <h3>Create an account</h3>
   <p>Please complete and submit the form.</p>
-  <form name="registration" action="registrationAction.php" class="was-validated">
+  <form name="registration" action="registrationAction.php" method="POST" class="was-validated">
       <div class="mb-3">
         <label for="firstname" class="form-label">First Name:</label>
         <input type="text" class="form-control" id="firstname" placeholder="Enter first name" name="firstname" autocomplete="on" required>
