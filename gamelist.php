@@ -145,7 +145,7 @@ $colCount =+ 1;
     if (isset($_POST['rating'])){
     $column_1 = $_POST['Col1'];
     $column_2 = $_POST['Col2'];
-    foreach ($_POST['KeyColumn'] as $key => rating){
+    foreach ($_POST['KeyColumn'] as $key => $rating){
         $select = "SELECT * FROM reviews WHERE KeyColumn='".$rating."'";
         $result = $conn->query($select);
         if ($result->num_rows>0){
