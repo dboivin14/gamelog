@@ -32,7 +32,7 @@
   background-color: #f1f1f1;
 }
 #col {
-  column-count: 3; 
+  -webkit-column-count: 3; 
 }
 
 }
