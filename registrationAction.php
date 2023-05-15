@@ -13,7 +13,7 @@ $sql = "INSERT IGNORE INTO users (username, email, firstname, lastname, password
 		VALUES (?,?,?,?,?,?)";
 
 $stmt= $db->prepare($sql);
-$stmt->execute([$username, $email, $firstname, $lastname, $password, $dob]);
+$stmt->execute();
 
 
 
