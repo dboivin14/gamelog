@@ -9,7 +9,7 @@ $dob = $_GET["dob"];
 
 
 
-$sql = "INSERT INTO users (username, email, firstname, lastname, password, dob)
+$sql = "INSERT INTO users ('', '', username, email, firstname, lastname, password, dob,'','')
 		VALUES (0,0,?,?,?,?,?,?,0,0)";
 
 $stmt= $db->prepare($sql);
