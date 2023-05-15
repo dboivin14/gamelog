@@ -161,6 +161,7 @@ $colCount =+ 1;
                       $sql ='INSERT INTO reviews (rating) VALUES (?)';
                       $stmt =$db->prepare($sql);
                       $stmt->execute();
+                  ?>
                 }
             }
         }
