@@ -75,7 +75,7 @@ button:hover {
 ?>
   
   <div class="container">
-        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="button" class="cancelbtn" action="gamelist.php">Add Games</button>
   </body>
   
   
