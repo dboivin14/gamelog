@@ -7,6 +7,6 @@ session_start();
  
   
   <h1>Personal Page</h1>
- echo %session["username"];
+ echo $session["username"];
 
 </html>
