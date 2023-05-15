@@ -52,7 +52,13 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
    <h1>Personal Page</h1>
  </body>
  <?php
- echo 'Hello, ', $_SESSION["name"];
+ echo 'Welcome, ', $_SESSION["name"];
 ?>
+  
+  <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+  </body>
+  
+  
  
 </html>
