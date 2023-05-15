@@ -57,7 +57,7 @@ if($result->rowCount()>0){
       while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       ?>
       
-      <div class="card" id='card'>  
+      <div class="card" id='card' style="width: 18rem;">  
           <div class="card-body">
             <h4 class="card-title"><?php echo $row['gamename'] ?></h4>
             <p class="card-text">
