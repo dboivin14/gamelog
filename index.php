@@ -63,6 +63,7 @@ if (isset($GET['msg']))
   <?php else: ?>
     <li class="right"><a href="registration_X.php">Register</a></li>
     <li class="right"><a href="login_X.php">Login</a></li>
+    <li class="right"><a href="loginProfile.php">Account</a></li>
   <?php endif; ?>
   
 </ul>
