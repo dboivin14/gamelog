@@ -117,6 +117,9 @@ if($result->rowCount()>0){
 ?>
 </div>
 <script>
+  $('#myModal').modal({
+    backdrop: 'static' // set a default value
+  });
  function myFunction() {
   var input, filter, cards, cardContainer, title, i;
   input = document.getElementById("myInput");
