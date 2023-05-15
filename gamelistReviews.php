@@ -31,9 +31,7 @@
 #card h4.header, #card h4:hover {
   background-color: #f1f1f1;
 }
-#col {
-  -webkit-column-count: 3; 
-}
+
 
 }
 
@@ -57,7 +55,7 @@ if($result->rowCount()>0){
       while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
       ?>
       
-      <div class="card" id='card' style="width: 18rem;">  
+      <div class="card" id='card' span='3' style="width: 18rem;">  
           <div class="card-body">
             <h4 class="card-title"><?php echo $row['gamename'] ?></h4>
             <p class="card-text">
