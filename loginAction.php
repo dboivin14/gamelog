@@ -20,7 +20,7 @@ $pwd = $_POST["pwd"];
       $_SESSION['id'] = $UserID;
       $_SESSION['name'] =    $firstname." ".$lastname;
         if(isset($_SESSION["id"])) {
-            header("Location:index.php");
+            header("Location:loginProfile.php");
         }
       exit;
     } else { 
