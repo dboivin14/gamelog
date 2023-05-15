@@ -1,16 +1,16 @@
 <?php include 'index.php';
 
-$username = $_GET["username"];
-$email = $_GET["email"];
-$firstname = $_GET["firstname"];
-$lastname = $_GET["lastname"];
-$password = $_GET["password"];
-$dob = $_GET["dob"];
+$username = $_POST["username"];
+$email = $_POST["email"];
+$firstname = $_POST["firstname"];
+$lastname = $_POST["lastname"];
+$password = $_POST["password"];
+$dob = $_POST["dob"];
 
 
 
-$sql = "INSERT INTO users ('', '', username, email, firstname, lastname, password, dob,'','')
-		VALUES (0,0,?,?,?,?,?,?,0,0)";
+$sql = "INSERT IGNORE INTO users (username, email, firstname, lastname, password, dob)
+		VALUES (?,?,?,?,?,?)";
 
 $stmt= $db->prepare($sql);
 $stmt->execute([$username, $email, $firstname, $lastname, $password, $dob]);
