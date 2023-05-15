@@ -11,7 +11,7 @@ $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword)
   <h1>Personal Page</h1>
  
  <?php
- echo "Hello," $_SESSION["name"];
+ echo 'Hello', $_SESSION["name"];
 ?>
  
 </html>
