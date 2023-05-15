@@ -8,7 +8,7 @@ session_start();
   
   <h1>Personal Page</h1>
  <?php
- echo $session["username"];
+ echo $_SESSION["username"];
 ?>
  
 </html>
