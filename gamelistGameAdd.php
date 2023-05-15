@@ -16,10 +16,10 @@
           echo 'game already in list';
       } else {
       $_SESSION['usergames'][$GameID] = 1
-      }
+      
  else {
    $_SESSION['usergames'] = array($gameID)
- 
+ }
   
   
 ?>
