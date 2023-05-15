@@ -74,8 +74,8 @@ button:hover {
  echo 'Welcome, ', $_SESSION["name"];
 ?>
   
-  <div class="container">
-        <button type="button" class="cancelbtn" action="gamelist.php">Add Games</button>
+  <a href = "gamelist.php">
+    <button> Add Games </button>
   </body>
   
   
