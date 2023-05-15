@@ -94,7 +94,7 @@ $colCount =+ 1;
         <!-- Modal body -->
         <div class="modal-body">
           The game's current rating: <?php echo $row['rating']?> / 5 <br>
-          Enter your own rating: <input type="text" id='myRating' something='myRatingFunction' placeholder="X.." title="Type in a rating">
+          Enter your own rating: <input type="number" id='myRating' something='myRatingFunction' placeholder="X" title="Type in a rating">
         </div>
 
         <!-- Modal footer -->
@@ -141,6 +141,27 @@ $colCount =+ 1;
       }       
     }
   }
+  function updateRating() { 
+    if (isset($_POST['rating']) and !empty($_POST['rating'])){
+    $column_1 = $_POST['Col1'];
+    $column_2 = $_POST['Col2'];
+    foreach ($_POST['KeyColumn'] as $key => $variable){
+        $select = "SELECT * FROM reviews WHERE KeyColumn='".$rating."'";
+        $result = $conn->query($select);
+        if ($result->num_rows>0){
+            while ($row=$result->fetchassoc()){
+                $same = true;
+                if (($row['Col1'] != $Col1[$key]) or ($row['Col2'] != $Col2[$key])){
+                    $same = false;
+                }
+                if (!$same){
+                     /* update sql on this line */
+                }
+            }
+        }
+    }
+    }
+}
   </script>
 
 </body>
