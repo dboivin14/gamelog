@@ -1,6 +1,5 @@
-<?php include("sqlpassword.php");
+<?php include("index.php");
 
-  $db = new PDO('mysql:host=localhost;dbname=gamelogapp;', $sqluser, $sqlpassword);
 
   
   $GameID = (int)$_GET['GameID'];
@@ -9,8 +8,8 @@
   
   $game = $stmt->fetch(PDO::FETCH_ASSOC);
   
-  $sql = "INSERT IGNORE INTO usergames (UserGamesID, UserID, GameID, Date)
-		VALUES (?,?,?,?)";                
+  $sql = "INSERT IGNORE INTO usergames (GameID, Date)
+		VALUES (?,?)";                
   $_SESSION['usergames'] = array($gameID)
 	  
   
