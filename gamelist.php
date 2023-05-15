@@ -167,7 +167,7 @@ $colCount =+ 1;
             }
         }
     }
-    }
+    
 }
   </script>
 
